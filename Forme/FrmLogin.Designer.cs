@@ -1,4 +1,4 @@
-﻿namespace Forme
+﻿namespace View
 {
     partial class FrmLogin
     {

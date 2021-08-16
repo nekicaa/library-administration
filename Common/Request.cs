@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace Common
 {
-    class Program
+    [Serializable]
+    public class Request
     {
-        static void Main(string[] args)
-        {
-        }
+        public Operation Operation { get; set; }
+        public object RequestObject { get; set; }
     }
 }

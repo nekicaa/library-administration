@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Forme
+namespace View
 {
     public partial class FrmLogin : Form
     {

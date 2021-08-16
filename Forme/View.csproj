@@ -45,6 +45,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Communication\Communication.cs" />
+    <Compile Include="Communication\CommunicationClient.cs" />
+    <Compile Include="Exceptions\ServerException.cs" />
+    <Compile Include="Exceptions\SystemNotFoundException.cs" />
+    <Compile Include="Exceptions\SystemOperationException.cs" />
     <Compile Include="FrmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -59,6 +64,60 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UserControls\UCAddBook.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UCAddBook.Designer.cs">
+      <DependentUpon>UCAddBook.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\UCAddMembers.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UCAddMembers.Designer.cs">
+      <DependentUpon>UCAddMembers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\UCAddRent.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UCAddRent.Designer.cs">
+      <DependentUpon>UCAddRent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\UCChangeMember.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UCChangeMember.Designer.cs">
+      <DependentUpon>UCChangeMember.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\UCDeleteBook.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UCDeleteBook.Designer.cs">
+      <DependentUpon>UCDeleteBook.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\UCDeleteMember.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UCDeleteMember.Designer.cs">
+      <DependentUpon>UCDeleteMember.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\UCDeleteRent.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UCDeleteRent.Designer.cs">
+      <DependentUpon>UCDeleteRent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\UCSearchBook.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UCSearchBook.Designer.cs">
+      <DependentUpon>UCSearchBook.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\UCSearchRent.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UCSearchRent.Designer.cs">
+      <DependentUpon>UCSearchRent.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -70,6 +129,26 @@
     <EmbeddedResource Include="FrmMain.resx">
       <DependentUpon>FrmMain.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UCAddBook.resx">
+      <DependentUpon>UCAddBook.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UCAddMembers.resx">
+      <DependentUpon>UCAddMembers.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Controller\" />
+    <Folder Include="Helpers\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Common\Common.csproj">
+      <Project>{3e3702a7-7c38-41e2-936f-8de2420fdcda}</Project>
+      <Name>Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Domen\Domain.csproj">
+      <Project>{b9e32439-0931-41f0-8db8-dc8fb82265dc}</Project>
+      <Name>Domain</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
