@@ -6,10 +6,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Domen
+namespace Domain
 {
     [Serializable]
-    public class Knjiga:IEntity
+    public class Knjiga : IEntity
     {
         public int Id { get; set; }
         public string Naziv { get; set; }

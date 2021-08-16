@@ -6,10 +6,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Domen
+namespace Domain
 {
     [Serializable]
-    public class Clan:IEntity
+    public class Clan : IEntity
     {
         public int Id { get; set; }
         public string Ime { get; set; }

@@ -6,10 +6,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Domen
+namespace Domain
 {
     [Serializable]
-    public class Iznajmljivanje:IEntity
+    public class Iznajmljivanje : IEntity
     {
         public int Id { get; set; }
         public DateTime DatumIznajmljivanja { get; set; }
@@ -60,7 +60,7 @@ namespace Domen
 
         public override string ToString()
         {
-            return $"{Id} {Clan.Ime} {Clan.Prezime} - {DatumIznajmljivanja}";
+            return $"{Clan.Ime} {Clan.Prezime} - {DatumIznajmljivanja}";
         }
     }
 }

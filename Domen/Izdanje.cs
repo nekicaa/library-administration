@@ -6,10 +6,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Domen
+namespace Domain
 {
     [Serializable]
-    public class Izdanje:IEntity
+    public class Izdanje : IEntity
     {
         public Knjiga Knjiga { get; set; }
         public Autor Autor { get; set; }
@@ -60,7 +60,7 @@ namespace Domen
 
         public override string ToString()
         {
-            return $"{RedniBroj}.{Knjiga.Naziv}-{Autor.Ime} {Autor.Prezime}";
+            return $"{RedniBroj}. {Knjiga.Naziv} - {Autor.Ime} {Autor.Prezime}";
         }
     }
 }

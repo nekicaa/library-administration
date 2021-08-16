@@ -6,10 +6,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Domen
+namespace Domain
 {
     [Serializable]
-    public class StavkaIznajmljivanja:IEntity
+    public class StavkaIznajmljivanja : IEntity
     {
         public int RedniBroj { get; set; }
         public int Kolicina { get; set; }
