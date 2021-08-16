@@ -18,7 +18,7 @@ namespace Domen
         [Browsable(false)]
         public string TableName => "Autor";
         [Browsable(false)]
-        public string InsertValues => $"'{Ime}','{Prezime}'";
+        public string InsertValues => $"{Id},'{Ime}','{Prezime}'";
         [Browsable(false)]
         public string IdName => "Id";
         [Browsable(false)]
@@ -26,7 +26,7 @@ namespace Domen
         [Browsable(false)]
         public string JoinTable => "";
         [Browsable(false)]
-        public string TableAlias => "";
+        public string TableAlias => "a";
         [Browsable(false)]
         public object SelectValues => "*";
         [Browsable(false)]
