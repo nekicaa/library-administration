@@ -136,6 +136,9 @@
     <EmbeddedResource Include="UserControls\UCAddMembers.resx">
       <DependentUpon>UCAddMembers.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UCAddRent.resx">
+      <DependentUpon>UCAddRent.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Controller\" />
