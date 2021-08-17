@@ -9,14 +9,14 @@ using System.Threading.Tasks;
 
 namespace DatabaseBroker
 {
-    class Broker
+    public class Broker
     {
         private SqlConnection connection;
         private SqlTransaction transaction;
 
         public Broker()
         {
-            connection = new SqlConnection(@"Data Source=DESKTOP-FV8VN8E;Initial Catalog=Seminarski;Integrated Security=True;");
+            connection = new SqlConnection(ConfigurationManager.ConnectionStrings["Seminarski"].ConnectionString);
         }
 
         public void OpenConnection()

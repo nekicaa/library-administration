@@ -43,11 +43,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Program.cs" />
+    <Compile Include="IGenericRepository.cs" />
+    <Compile Include="Implementation\GenericRepository.cs" />
+    <Compile Include="Implementation\StorageAdministratorSQLServer.cs" />
+    <Compile Include="IStorageAdministrator.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DatabaseBroker\DatabaseBroker.csproj">
+      <Project>{c1d1da04-e12d-4428-b17f-e5f9c8c19aad}</Project>
+      <Name>DatabaseBroker</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Domen\Domain.csproj">
+      <Project>{b9e32439-0931-41f0-8db8-dc8fb82265dc}</Project>
+      <Name>Domain</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

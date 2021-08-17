@@ -12,6 +12,7 @@ namespace Domain
     public class Administrator : IEntity
     {
         public int Id { get; set; }
+        public bool StatusUlogovan { get; set; }
         public string Ime { get; set; }
         public string Prezime { get; set; }
         public string KorisnickoIme { get; set; }

@@ -60,5 +60,7 @@ namespace View.Communication
             client.SendRequest(request);
             return (Administrator)client.GetResponseResult();
         }
+
+        //implementiraju se sistemske operacije
     }
 }

@@ -9,6 +9,6 @@ namespace Common
     public enum Operation
     {
         Login
-        //dodati operacije
+        //dodati sistemske operacije
     }
 }
