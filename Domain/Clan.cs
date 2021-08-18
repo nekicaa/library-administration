@@ -9,17 +9,18 @@ using System.Threading.Tasks;
 namespace Domain
 {
     [Serializable]
-    public class Knjiga : IEntity
+    public class Clan : IEntity
     {
         public int Id { get; set; }
-        public string Naziv { get; set; }
-        public string ISBN { get; set; }
-        public string Zanr { get; set; }
+        public string Ime { get; set; }
+        public string Prezime { get; set; }
+        public DateTime DatumRodjenja { get; set; }
+        public string Kontakt { get; set; }
 
         [Browsable(false)]
-        public string TableName => "Knjiga";
+        public string TableName => "Clan";
         [Browsable(false)]
-        public string InsertValues => $"{Id},'{Naziv}','{ISBN}','{Zanr}'";
+        public string InsertValues => $"'{Ime}','{Prezime}','{DatumRodjenja}','{Kontakt}'";
         [Browsable(false)]
         public string IdName => "Id";
         [Browsable(false)]
@@ -27,7 +28,7 @@ namespace Domain
         [Browsable(false)]
         public string JoinTable => "";
         [Browsable(false)]
-        public string TableAlias => "k";
+        public string TableAlias => "c";
         [Browsable(false)]
         public object SelectValues => "*";
         [Browsable(false)]
@@ -45,12 +46,13 @@ namespace Domain
             List<IEntity> result = new List<IEntity>();
             while (reader.Read())
             {
-                result.Add(new Knjiga
+                result.Add(new Clan
                 {
                     Id = (int)reader[0],
-                    Naziv = (string)reader[1],
-                    ISBN = (string)reader[2],
-                    Zanr = (string)reader[3]
+                    Ime = (string)reader[1],
+                    Prezime = (string)reader[2],
+                    DatumRodjenja = (DateTime)reader[3],
+                    Kontakt = (string)reader[4]
                 });
             }
             return result;
@@ -58,7 +60,7 @@ namespace Domain
 
         public override string ToString()
         {
-            return $"{Naziv}";
+            return $"{Ime} {Prezime}";
         }
     }
 }

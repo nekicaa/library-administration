@@ -9,29 +9,26 @@ using System.Threading.Tasks;
 namespace Domain
 {
     [Serializable]
-    public class Administrator : IEntity
+    public class StavkaIznajmljivanja : IEntity
     {
-        public int Id { get; set; }
-        public bool StatusUlogovan { get; set; }
-        public string Ime { get; set; }
-        public string Prezime { get; set; }
-        public string KorisnickoIme { get; set; }
-        public string Sifra { get; set; }
+        public int RedniBroj { get; set; }
+        public int Kolicina { get; set; }
+        public Knjiga Knjiga { get; set; }
 
         [Browsable(false)]
-        public string TableName => "Administrator";
+        public string TableName => "StavkaIznajmljivanja";
         [Browsable(false)]
-        public string InsertValues => $"{Id},'{Ime}','{Prezime}','{KorisnickoIme}','{Sifra}'";
+        public string InsertValues => $"{Kolicina},{Knjiga.Id}";
         [Browsable(false)]
-        public string IdName => "Id";
+        public string IdName => "RedniBroj";
         [Browsable(false)]
-        public string JoinCondition => "";
+        public string JoinCondition => "on (k.Id=si.KnjigaId)";
         [Browsable(false)]
-        public string JoinTable => "";
+        public string JoinTable => "join Knjiga k";
         [Browsable(false)]
-        public string TableAlias => "ad";
+        public string TableAlias => "si";
         [Browsable(false)]
-        public object SelectValues => "*";
+        public object SelectValues => "si.RedniBroj, si.Kolicina, k.Id, k.Naziv, k.ISBN, k.Zanr";
         [Browsable(false)]
         public string WhereCondition => "";
         [Browsable(false)]
@@ -47,13 +44,11 @@ namespace Domain
             List<IEntity> result = new List<IEntity>();
             while (reader.Read())
             {
-                result.Add(new Administrator
+                result.Add(new StavkaIznajmljivanja
                 {
-                    Id = (int)reader[0],
-                    Ime = (string)reader[1],
-                    Prezime = (string)reader[2],
-                    KorisnickoIme = (string)reader[3],
-                    Sifra = (string)reader[4]
+                    RedniBroj = (int)reader[0],
+                    Kolicina = (int)reader[1],
+                    Knjiga = new Knjiga() { Id=(int)reader[2], Naziv=(string)reader[3], ISBN=(string)reader[4], Zanr=(string)reader[5]}
                 });
             }
             return result;
@@ -61,7 +56,7 @@ namespace Domain
 
         public override string ToString()
         {
-            return $"{Ime} {Prezime}";
+            return $"{RedniBroj}. {Knjiga.Naziv} {Kolicina}";
         }
     }
 }

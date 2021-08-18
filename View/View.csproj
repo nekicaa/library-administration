@@ -6,8 +6,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{DA5A6E3A-DACE-4459-B24B-23BDA7A89A3A}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Forme</RootNamespace>
-    <AssemblyName>Forme</AssemblyName>
+    <RootNamespace>View</RootNamespace>
+    <AssemblyName>View</AssemblyName>
     <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -148,7 +148,7 @@
       <Project>{3e3702a7-7c38-41e2-936f-8de2420fdcda}</Project>
       <Name>Common</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Domen\Domain.csproj">
+    <ProjectReference Include="..\Domain\Domain.csproj">
       <Project>{b9e32439-0931-41f0-8db8-dc8fb82265dc}</Project>
       <Name>Domain</Name>
     </ProjectReference>

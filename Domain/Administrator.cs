@@ -9,18 +9,19 @@ using System.Threading.Tasks;
 namespace Domain
 {
     [Serializable]
-    public class Clan : IEntity
+    public class Administrator : IEntity
     {
         public int Id { get; set; }
+        public bool StatusUlogovan { get; set; }
         public string Ime { get; set; }
         public string Prezime { get; set; }
-        public DateTime DatumRodjenja { get; set; }
-        public string Kontakt { get; set; }
+        public string KorisnickoIme { get; set; }
+        public string Sifra { get; set; }
 
         [Browsable(false)]
-        public string TableName => "Clan";
+        public string TableName => "Administrator";
         [Browsable(false)]
-        public string InsertValues => $"{Id},'{Ime}','{Prezime}','{DatumRodjenja}','{Kontakt}'";
+        public string InsertValues => $"'{Ime}','{Prezime}','{KorisnickoIme}','{Sifra}'";
         [Browsable(false)]
         public string IdName => "Id";
         [Browsable(false)]
@@ -28,7 +29,7 @@ namespace Domain
         [Browsable(false)]
         public string JoinTable => "";
         [Browsable(false)]
-        public string TableAlias => "c";
+        public string TableAlias => "ad";
         [Browsable(false)]
         public object SelectValues => "*";
         [Browsable(false)]
@@ -46,13 +47,13 @@ namespace Domain
             List<IEntity> result = new List<IEntity>();
             while (reader.Read())
             {
-                result.Add(new Clan
+                result.Add(new Administrator
                 {
                     Id = (int)reader[0],
                     Ime = (string)reader[1],
                     Prezime = (string)reader[2],
-                    DatumRodjenja = (DateTime)reader[3],
-                    Kontakt = (string)reader[4]
+                    KorisnickoIme = (string)reader[3],
+                    Sifra = (string)reader[4]
                 });
             }
             return result;

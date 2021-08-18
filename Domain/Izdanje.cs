@@ -20,9 +20,9 @@ namespace Domain
         [Browsable(false)]
         public string TableName => "Izdanje";
         [Browsable(false)]
-        public string InsertValues => $"{Knjiga.Id},{Autor.Id},{RedniBroj},'{GodinaStampe}','{Izdavac}'";
+        public string InsertValues => $"{Knjiga.Id},{Autor.Id},'{GodinaStampe}','{Izdavac}'";
         [Browsable(false)]
-        public string IdName => "Id";
+        public string IdName => "RedniBroj";
         [Browsable(false)]
         public string JoinCondition => "on (k.Id=i.KnjigaId) join Autor a on (a.Id=i.AutorId)";
         [Browsable(false)]

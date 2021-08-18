@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Data.SqlClient;
 using System.ComponentModel;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -9,16 +9,17 @@ using System.Threading.Tasks;
 namespace Domain
 {
     [Serializable]
-    public class Autor : IEntity
+    public class Knjiga : IEntity
     {
         public int Id { get; set; }
-        public string Ime { get; set; }
-        public string Prezime { get; set; }
+        public string Naziv { get; set; }
+        public string ISBN { get; set; }
+        public string Zanr { get; set; }
 
         [Browsable(false)]
-        public string TableName => "Autor";
+        public string TableName => "Knjiga";
         [Browsable(false)]
-        public string InsertValues => $"{Id},'{Ime}','{Prezime}'";
+        public string InsertValues => $"'{Naziv}','{ISBN}','{Zanr}'";
         [Browsable(false)]
         public string IdName => "Id";
         [Browsable(false)]
@@ -26,7 +27,7 @@ namespace Domain
         [Browsable(false)]
         public string JoinTable => "";
         [Browsable(false)]
-        public string TableAlias => "a";
+        public string TableAlias => "k";
         [Browsable(false)]
         public object SelectValues => "*";
         [Browsable(false)]
@@ -44,11 +45,12 @@ namespace Domain
             List<IEntity> result = new List<IEntity>();
             while (reader.Read())
             {
-                result.Add(new Autor
+                result.Add(new Knjiga
                 {
                     Id = (int)reader[0],
-                    Ime = (string)reader[1],
-                    Prezime = (string)reader[2]
+                    Naziv = (string)reader[1],
+                    ISBN = (string)reader[2],
+                    Zanr = (string)reader[3]
                 });
             }
             return result;
@@ -56,7 +58,7 @@ namespace Domain
 
         public override string ToString()
         {
-            return $"{Ime} {Prezime}";
+            return $"{Naziv}";
         }
     }
 }

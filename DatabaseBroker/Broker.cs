@@ -16,7 +16,8 @@ namespace DatabaseBroker
 
         public Broker()
         {
-            connection = new SqlConnection(ConfigurationManager.ConnectionStrings["Seminarski"].ConnectionString);
+            //connection = new SqlConnection(@"Data Source=DESKTOP-FV8VN8E;Initial Catalog=ProSoft-Seminarski;Integrated Security=True;");
+            connection = new SqlConnection(ConfigurationManager.ConnectionStrings["ProSoft-Seminarski"].ConnectionString);
         }
 
         public void OpenConnection()

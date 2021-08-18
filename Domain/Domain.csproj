@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{1C9A5611-46A9-436B-98C4-82DE0C1AB85B}</ProjectGuid>
-    <OutputType>Exe</OutputType>
-    <RootNamespace>Kontroler</RootNamespace>
-    <AssemblyName>Kontroler</AssemblyName>
+    <ProjectGuid>{B9E32439-0931-41F0-8DB8-DC8FB82265DC}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Domain</RootNamespace>
+    <AssemblyName>Domain</AssemblyName>
     <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -32,6 +32,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -43,11 +46,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Program.cs" />
+    <Compile Include="Administrator.cs" />
+    <Compile Include="Autor.cs" />
+    <Compile Include="Clan.cs" />
+    <Compile Include="IEntity.cs" />
+    <Compile Include="Izdanje.cs" />
+    <Compile Include="Iznajmljivanje.cs" />
+    <Compile Include="Knjiga.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="App.config" />
+    <Compile Include="StavkaIznajmljivanja.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
