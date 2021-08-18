@@ -24,7 +24,7 @@ namespace Server
             this.administratori = administratori;
         }
 
-        internal void StartHandler()
+        public void StartHandler()
         {
             try
             {
@@ -50,6 +50,8 @@ namespace Server
             catch (IOException)
             {
                 Console.WriteLine("Doslo je do prekida veze");
+                //obratiti paznju na EventHandler FrmMain FormClosed (ako zatvorimo glavnu formu, i prakticno se izlogujemo, prekidamo vezu sa serverom
+                //drugi nacin bi bio da posaljemo zahtev sa operacijom logout, tako da klijent ostane povezan
                 administratori.Remove(ulogovaniAdministrator);
 
             }
@@ -68,18 +70,28 @@ namespace Server
             response.IsSuccessful = true;
             switch (request.Operation)
             {
-                /*case Operation.Login:
-                    Administrator a = Controller.Instance.Login((Administrator)request.RequestObject);
-                    if (a != null)
-                    {
-                        a.StatusUlogavan = administratori.Any(aa => aa.Sifra == a.Sifra);
-                        ulogovaniAdministrator = a;
-                        administratori.Add(ulogovaniAdministrator);
-                    }
-                    response.Result = a;
-                    //ulogovaniAdministrator = (Administrator)response.Result;
-                    break;*/
-                
+                /*
+                case Operation.Login:
+                    response.Result = Controller.Instance.Login((User)request.RequestObject);
+                    loggedInUser = (User)response.Result;
+                    users.Add(loggedInUser);
+                    break;
+                case Operation.GetAllManufacturers:
+                    response.Result = Controller.Instance.GetAllManufacturers();
+                    break;
+                case Operation.GetAllProducts:
+                    response.Result = Controller.Instance.GetAllProducts();
+                    break;
+                case Operation.SaveInvoice:
+                    Controller.Instance.SaveInvoice((Invoice)request.RequestObject);
+                    break;
+                case Operation.SaveManufacturer:
+                    Controller.Instance.SaveManufacturer((Manufacturer)request.RequestObject);
+                    break;
+                case Operation.SaveProduct:
+                    Controller.Instance.SaveProduct((Product)request.RequestObject);
+                    break;
+                    */
             }
             return response;
         }

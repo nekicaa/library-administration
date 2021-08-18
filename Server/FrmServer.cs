@@ -20,6 +20,14 @@ namespace Server
             InitializeComponent();
         }
 
+        private void FrmServer_Load(object sender, EventArgs e)
+        {
+            btnPokreni.Enabled = true;
+            btnZaustavi.Enabled = false;
+            txtStanjeServera.Text = "Server nije pokrenut";
+            txtStanjeServera.BackColor = Color.LightCoral;
+        }
+
         private void btnPokreni_Click(object sender, EventArgs e)
         {
             try
@@ -39,14 +47,6 @@ namespace Server
                 //MessageBox.Show(ex.Message);
                 MessageBox.Show("Neuspesno pokretanje servera! " + ex.Message);
             }
-        }
-
-        private void FrmServer_Load(object sender, EventArgs e)
-        {
-            btnPokreni.Enabled = true;
-            btnZaustavi.Enabled = false;
-            txtStanjeServera.Text = "Server nije pokrenut";
-            txtStanjeServera.BackColor = Color.LightCoral;
         }
 
         private void btnZaustavi_Click(object sender, EventArgs e)
