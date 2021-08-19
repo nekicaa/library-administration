@@ -44,6 +44,7 @@
             this.btnPrijava.TabIndex = 9;
             this.btnPrijava.Text = "Prijavi se";
             this.btnPrijava.UseVisualStyleBackColor = true;
+            this.btnPrijava.Click += new System.EventHandler(this.btnPrijava_Click);
             // 
             // txtSifra
             // 

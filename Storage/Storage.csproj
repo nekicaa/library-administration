@@ -53,9 +53,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\DatabaseBroker\DatabaseBroker.csproj">
       <Project>{c1d1da04-e12d-4428-b17f-e5f9c8c19aad}</Project>
       <Name>DatabaseBroker</Name>

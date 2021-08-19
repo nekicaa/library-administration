@@ -47,6 +47,7 @@
   <ItemGroup>
     <Compile Include="Communication\Communication.cs" />
     <Compile Include="Communication\CommunicationClient.cs" />
+    <Compile Include="Controller\LoginController.cs" />
     <Compile Include="Exceptions\ServerException.cs" />
     <Compile Include="Exceptions\SystemNotFoundException.cs" />
     <Compile Include="Exceptions\SystemOperationException.cs" />
@@ -140,9 +141,7 @@
       <DependentUpon>UCAddRent.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Controller\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\Common\Common.csproj">
       <Project>{3e3702a7-7c38-41e2-936f-8de2420fdcda}</Project>
