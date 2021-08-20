@@ -28,33 +28,33 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.pnlMainContainer = new System.Windows.Forms.Panel();
+            this.pnlMain = new System.Windows.Forms.Panel();
             this.lblWelcome = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.knjigeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.clanoviToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.iznajmljivanjaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dodajNovuKnjiguToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.izmeniKnjiguToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.obrisiKnjiguToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.clanoviToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dodajNovogClanaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pretraziClanoveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.obrisiClanaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.iznajmljivanjaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.napraviNovoIznajmljivanjeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pretragaIznajmljenihKnjigaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.razduzivanjeKnjigaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.pnlMainContainer.SuspendLayout();
+            this.pnlMain.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // pnlMainContainer
+            // pnlMain
             // 
-            this.pnlMainContainer.Controls.Add(this.lblWelcome);
-            this.pnlMainContainer.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlMainContainer.Location = new System.Drawing.Point(0, 24);
-            this.pnlMainContainer.Name = "pnlMainContainer";
-            this.pnlMainContainer.Size = new System.Drawing.Size(800, 426);
-            this.pnlMainContainer.TabIndex = 3;
+            this.pnlMain.Controls.Add(this.lblWelcome);
+            this.pnlMain.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlMain.Location = new System.Drawing.Point(0, 24);
+            this.pnlMain.Name = "pnlMain";
+            this.pnlMain.Size = new System.Drawing.Size(800, 426);
+            this.pnlMain.TabIndex = 3;
             // 
             // lblWelcome
             // 
@@ -62,9 +62,9 @@
             this.lblWelcome.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblWelcome.Location = new System.Drawing.Point(277, 164);
             this.lblWelcome.Name = "lblWelcome";
-            this.lblWelcome.Size = new System.Drawing.Size(153, 24);
+            this.lblWelcome.Size = new System.Drawing.Size(232, 24);
             this.lblWelcome.TabIndex = 0;
-            this.lblWelcome.Text = "Welcome, User";
+            this.lblWelcome.Text = "Welcome, Administrator";
             // 
             // menuStrip1
             // 
@@ -88,6 +88,24 @@
             this.knjigeToolStripMenuItem.Size = new System.Drawing.Size(52, 20);
             this.knjigeToolStripMenuItem.Text = "Knjige";
             // 
+            // dodajNovuKnjiguToolStripMenuItem
+            // 
+            this.dodajNovuKnjiguToolStripMenuItem.Name = "dodajNovuKnjiguToolStripMenuItem";
+            this.dodajNovuKnjiguToolStripMenuItem.Size = new System.Drawing.Size(171, 22);
+            this.dodajNovuKnjiguToolStripMenuItem.Text = "Dodaj novu knjigu";
+            // 
+            // izmeniKnjiguToolStripMenuItem
+            // 
+            this.izmeniKnjiguToolStripMenuItem.Name = "izmeniKnjiguToolStripMenuItem";
+            this.izmeniKnjiguToolStripMenuItem.Size = new System.Drawing.Size(171, 22);
+            this.izmeniKnjiguToolStripMenuItem.Text = "Izmeni knjigu";
+            // 
+            // obrisiKnjiguToolStripMenuItem
+            // 
+            this.obrisiKnjiguToolStripMenuItem.Name = "obrisiKnjiguToolStripMenuItem";
+            this.obrisiKnjiguToolStripMenuItem.Size = new System.Drawing.Size(171, 22);
+            this.obrisiKnjiguToolStripMenuItem.Text = "Obrisi knjigu";
+            // 
             // clanoviToolStripMenuItem
             // 
             this.clanoviToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -98,6 +116,24 @@
             this.clanoviToolStripMenuItem.Size = new System.Drawing.Size(59, 20);
             this.clanoviToolStripMenuItem.Text = "Clanovi";
             // 
+            // dodajNovogClanaToolStripMenuItem
+            // 
+            this.dodajNovogClanaToolStripMenuItem.Name = "dodajNovogClanaToolStripMenuItem";
+            this.dodajNovogClanaToolStripMenuItem.Size = new System.Drawing.Size(173, 22);
+            this.dodajNovogClanaToolStripMenuItem.Text = "Dodaj novog clana";
+            // 
+            // pretraziClanoveToolStripMenuItem
+            // 
+            this.pretraziClanoveToolStripMenuItem.Name = "pretraziClanoveToolStripMenuItem";
+            this.pretraziClanoveToolStripMenuItem.Size = new System.Drawing.Size(173, 22);
+            this.pretraziClanoveToolStripMenuItem.Text = "Pretrazi clanove";
+            // 
+            // obrisiClanaToolStripMenuItem
+            // 
+            this.obrisiClanaToolStripMenuItem.Name = "obrisiClanaToolStripMenuItem";
+            this.obrisiClanaToolStripMenuItem.Size = new System.Drawing.Size(173, 22);
+            this.obrisiClanaToolStripMenuItem.Text = "Obrisi clana";
+            // 
             // iznajmljivanjaToolStripMenuItem
             // 
             this.iznajmljivanjaToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -107,42 +143,6 @@
             this.iznajmljivanjaToolStripMenuItem.Name = "iznajmljivanjaToolStripMenuItem";
             this.iznajmljivanjaToolStripMenuItem.Size = new System.Drawing.Size(91, 20);
             this.iznajmljivanjaToolStripMenuItem.Text = "Iznajmljivanja";
-            // 
-            // dodajNovuKnjiguToolStripMenuItem
-            // 
-            this.dodajNovuKnjiguToolStripMenuItem.Name = "dodajNovuKnjiguToolStripMenuItem";
-            this.dodajNovuKnjiguToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.dodajNovuKnjiguToolStripMenuItem.Text = "Dodaj novu knjigu";
-            // 
-            // izmeniKnjiguToolStripMenuItem
-            // 
-            this.izmeniKnjiguToolStripMenuItem.Name = "izmeniKnjiguToolStripMenuItem";
-            this.izmeniKnjiguToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.izmeniKnjiguToolStripMenuItem.Text = "Izmeni knjigu";
-            // 
-            // obrisiKnjiguToolStripMenuItem
-            // 
-            this.obrisiKnjiguToolStripMenuItem.Name = "obrisiKnjiguToolStripMenuItem";
-            this.obrisiKnjiguToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.obrisiKnjiguToolStripMenuItem.Text = "Obrisi knjigu";
-            // 
-            // dodajNovogClanaToolStripMenuItem
-            // 
-            this.dodajNovogClanaToolStripMenuItem.Name = "dodajNovogClanaToolStripMenuItem";
-            this.dodajNovogClanaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.dodajNovogClanaToolStripMenuItem.Text = "Dodaj novog clana";
-            // 
-            // pretraziClanoveToolStripMenuItem
-            // 
-            this.pretraziClanoveToolStripMenuItem.Name = "pretraziClanoveToolStripMenuItem";
-            this.pretraziClanoveToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.pretraziClanoveToolStripMenuItem.Text = "Pretrazi clanove";
-            // 
-            // obrisiClanaToolStripMenuItem
-            // 
-            this.obrisiClanaToolStripMenuItem.Name = "obrisiClanaToolStripMenuItem";
-            this.obrisiClanaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.obrisiClanaToolStripMenuItem.Text = "Obrisi clana";
             // 
             // napraviNovoIznajmljivanjeToolStripMenuItem
             // 
@@ -167,12 +167,12 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.pnlMainContainer);
+            this.Controls.Add(this.pnlMain);
             this.Controls.Add(this.menuStrip1);
             this.Name = "FrmMain";
             this.Text = "Pocetna strana";
-            this.pnlMainContainer.ResumeLayout(false);
-            this.pnlMainContainer.PerformLayout();
+            this.pnlMain.ResumeLayout(false);
+            this.pnlMain.PerformLayout();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -182,7 +182,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Panel pnlMainContainer;
+        private System.Windows.Forms.Panel pnlMain;
         private System.Windows.Forms.Label lblWelcome;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem knjigeToolStripMenuItem;
