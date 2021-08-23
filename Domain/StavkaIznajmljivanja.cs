@@ -11,6 +11,8 @@ namespace Domain
     [Serializable]
     public class StavkaIznajmljivanja : IEntity
     {
+        [Browsable(false)]
+        public Iznajmljivanje Iznajmljivanje { get; set; }
         public int RedniBroj { get; set; }
         public int Kolicina { get; set; }
         public Knjiga Knjiga { get; set; }
@@ -18,17 +20,17 @@ namespace Domain
         [Browsable(false)]
         public string TableName => "StavkaIznajmljivanja";
         [Browsable(false)]
-        public string InsertValues => $"{Kolicina},{Knjiga.Id}";
+        public string InsertValues => $"{Iznajmljivanje.Id},{Kolicina},{Knjiga.Id}";
         [Browsable(false)]
         public string IdName => "RedniBroj";
         [Browsable(false)]
-        public string JoinCondition => "on (k.Id=si.KnjigaId)";
+        public string JoinCondition => "on (k.Id=si.KnjigaId) join Iznajmljivanje iz on (iz.Id=si.IznajmljivanjeId)";
         [Browsable(false)]
         public string JoinTable => "join Knjiga k";
         [Browsable(false)]
         public string TableAlias => "si";
         [Browsable(false)]
-        public object SelectValues => "si.RedniBroj, si.Kolicina, k.Id, k.Naziv, k.ISBN, k.Zanr";
+        public object SelectValues => "si.IznajmljivanjeId, si.RedniBroj, si.Kolicina, k.Id, k.Naziv, k.ISBN, k.Zanr";
         [Browsable(false)]
         public string WhereCondition => "";
         [Browsable(false)]
@@ -46,9 +48,13 @@ namespace Domain
             {
                 result.Add(new StavkaIznajmljivanja
                 {
-                    RedniBroj = (int)reader[0],
-                    Kolicina = (int)reader[1],
-                    Knjiga = new Knjiga() { Id=(int)reader[2], Naziv=(string)reader[3], ISBN=(string)reader[4], Zanr=(string)reader[5]}
+                    Iznajmljivanje = new Iznajmljivanje
+                    {
+                        Id = (int)reader[0]
+                    },
+                    RedniBroj = (int)reader[1],
+                    Kolicina = (int)reader[2],
+                    Knjiga = new Knjiga() { Id=(int)reader[3], Naziv=(string)reader[4], ISBN=(string)reader[5], Zanr=(string)reader[6]}
                 });
             }
             return result;

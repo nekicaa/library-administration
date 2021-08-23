@@ -15,6 +15,7 @@ namespace Domain
         public DateTime DatumIznajmljivanja { get; set; }
         public DateTime RokZaRazduzivanje { get; set; }
         public Clan Clan { get; set; }
+        [Browsable(false)]
         public List<StavkaIznajmljivanja> Stavke { get; set; }
 
         [Browsable(false)]

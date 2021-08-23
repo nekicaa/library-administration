@@ -54,6 +54,17 @@
     <Compile Include="ClanSO\UcitajOdabranogClana.cs" />
     <Compile Include="ClanSO\VratiListuClanova.cs" />
     <Compile Include="ClanSO\ZapamtiClana.cs" />
+    <Compile Include="IznajmljivanjeSO\ObrisiIznajmljivanje.cs" />
+    <Compile Include="IznajmljivanjeSO\PretraziIznajmljivanje.cs" />
+    <Compile Include="IznajmljivanjeSO\UcitajOdabranoIznajmljivanje.cs" />
+    <Compile Include="IznajmljivanjeSO\UcitajStavkeIznajmljivanja.cs" />
+    <Compile Include="IznajmljivanjeSO\VratiListuIznajmljivanja.cs" />
+    <Compile Include="IznajmljivanjeSO\ZapamtiIznajmljivanje.cs" />
+    <Compile Include="KnjigaSO\ObrisiOdabranuKnjigu.cs" />
+    <Compile Include="KnjigaSO\PretraziKnjige.cs" />
+    <Compile Include="KnjigaSO\UcitajOdabranuKnjigu.cs" />
+    <Compile Include="KnjigaSO\VratiListuKnjiga.cs" />
+    <Compile Include="KnjigaSO\ZapamtiKnjigu.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SystemOperationBase.cs" />
   </ItemGroup>
@@ -67,9 +78,6 @@
       <Name>Storage</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="IznajmljivanjeSO\" />
-    <Folder Include="KnjigaSO\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
