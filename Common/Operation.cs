@@ -23,10 +23,9 @@ namespace Common
         DeleteKnjiga,
         SaveIznajmljivanje,
         GetIznajmljivanje,
+        //GetStavkeIznajmljivanja,
         GetIznajmljivanjeWithCondition,
         GetOneIznajmljivanje,
         DeleteIznajmljivanje
-
-        //dodati sistemske operacije
     }
 }
