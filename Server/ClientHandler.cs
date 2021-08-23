@@ -70,28 +70,65 @@ namespace Server
             response.IsSuccessful = true;
             switch (request.Operation)
             {
-                /*
                 case Operation.Login:
-                    response.Result = Controller.Instance.Login((User)request.RequestObject);
-                    loggedInUser = (User)response.Result;
-                    users.Add(loggedInUser);
+                    response.Result = Controller.Controller.Instance.Login((Administrator)request.RequestObject);
+                    ulogovaniAdministrator = (Administrator)response.Result;
+                    administratori.Add(ulogovaniAdministrator);
                     break;
-                case Operation.GetAllManufacturers:
-                    response.Result = Controller.Instance.GetAllManufacturers();
+                case Operation.SaveClan:
+                    Controller.Controller.Instance.SaveClan((Clan)request.RequestObject);
                     break;
-                case Operation.GetAllProducts:
-                    response.Result = Controller.Instance.GetAllProducts();
+                case Operation.GetClan:
+                    response.Result = Controller.Controller.Instance.GetClan();
                     break;
-                case Operation.SaveInvoice:
-                    Controller.Instance.SaveInvoice((Invoice)request.RequestObject);
+                case Operation.GetClanWithCondition:
+                    response.Result = Controller.Controller.Instance.GetClanWithCondition((Clan)request.RequestObject);
                     break;
-                case Operation.SaveManufacturer:
-                    Controller.Instance.SaveManufacturer((Manufacturer)request.RequestObject);
+                case Operation.GetOneClan:
+                    response.Result = Controller.Controller.Instance.GetOneClan((Clan)request.RequestObject);
                     break;
-                case Operation.SaveProduct:
-                    Controller.Instance.SaveProduct((Product)request.RequestObject);
+                case Operation.UpdateClan:
+                    Controller.Controller.Instance.UpdateClan((Clan)request.RequestObject);
                     break;
-                    */
+                case Operation.DeleteClan:
+                    Controller.Controller.Instance.DeleteClan((Clan)request.RequestObject);
+                    break;
+                case Operation.GetAutor:
+                    response.Result = Controller.Controller.Instance.GetAutor();
+                    break;
+                case Operation.SaveKnjiga:
+                    Controller.Controller.Instance.SaveKnjiga((Knjiga)request.RequestObject);
+                    break;
+                case Operation.GetKnjiga:
+                    response.Result = Controller.Controller.Instance.GetKnjiga();
+                    break;
+                case Operation.GetKnjigaWithCondition:
+                    response.Result = Controller.Controller.Instance.GetKnjigaWithCondition((Knjiga)request.RequestObject);
+                    break;
+                case Operation.GetOneKnjiga:
+                    response.Result = Controller.Controller.Instance.GetOneKnjiga((Knjiga)request.RequestObject);
+                    break;
+                case Operation.DeleteKnjiga:
+                    Controller.Controller.Instance.DeleteKnjiga((Knjiga)request.RequestObject);
+                    break;
+                case Operation.SaveIznajmljivanje:
+                    Controller.Controller.Instance.SaveIznajmljivanje((Iznajmljivanje)request.RequestObject);
+                    break;
+                case Operation.GetIznajmljivanje:
+                    response.Result = Controller.Controller.Instance.GetIznajmljivanje();
+                    break;
+                /*case Operation.GetStavkeIznajmljivanja:
+                    response.Result = Controller.Controller.Instance.GetStavkeIznajmljivanja();
+                    break;*/
+                case Operation.GetIznajmljivanjeWithCondition:
+                    response.Result = Controller.Controller.Instance.GetIznajmljivanjeWithCondition((Iznajmljivanje)request.RequestObject);
+                    break;
+                case Operation.GetOneIznajmljivanje:
+                    response.Result = Controller.Controller.Instance.GetOneIznajmljivanje((Iznajmljivanje)request.RequestObject);
+                    break;
+                case Operation.DeleteIznajmljivanje:
+                    Controller.Controller.Instance.DeleteIznajmljivanje((Iznajmljivanje)request.RequestObject);
+                    break;
             }
             return response;
         }

@@ -61,6 +61,132 @@ namespace View.Communication
             return (Administrator)client.GetResponseResult();
         }
 
+        internal List<Autor> GetAutor()
+        {
+            Request request = new Request() { Operation = Operation.GetAutor };
+            client.SendRequest(request);
+            return (List<Autor>)client.GetResponseResult();
+        }
+
+        internal void SaveClan(Clan clan)
+        {
+            Request request = new Request() { Operation = Operation.SaveClan, RequestObject = clan };
+            client.SendRequest(request);
+            client.GetResponseResult();
+        }
+
+        internal List<Clan> GetClan()
+        {
+            Request request = new Request() { Operation = Operation.GetClan };
+            client.SendRequest(request);
+            return (List<Clan>)client.GetResponseResult();
+        }
+
+        internal List<Clan> GetClanWithCondition(Clan clan)
+        {
+            Request request = new Request() { Operation = Operation.GetClanWithCondition, RequestObject = clan };
+            client.SendRequest(request);
+            return (List<Clan>)client.GetResponseResult();
+        }
+
+        internal Clan GetOneClan(Clan clan)
+        {
+            Request request = new Request() { Operation = Operation.GetOneClan, RequestObject = clan };
+            client.SendRequest(request);
+            return (Clan)client.GetResponseResult();
+        }
+
+        internal void UpdateClan(Clan clan)
+        {
+            Request request = new Request() { Operation = Operation.UpdateClan, RequestObject = clan };
+            client.SendRequest(request);
+            client.GetResponseResult();
+        }
+
+        internal void DeleteClan(Clan clan)
+        {
+            Request request = new Request() { Operation = Operation.DeleteClan, RequestObject = clan };
+            client.SendRequest(request);
+            client.GetResponseResult();
+        }
+
+        internal void SaveKnjiga(Knjiga knjiga)
+        {
+            Request request = new Request() { Operation = Operation.SaveKnjiga, RequestObject = knjiga };
+            client.SendRequest(request);
+            client.GetResponseResult();
+        }
+
+        internal List<Knjiga> GetKnjiga()
+        {
+            Request request = new Request() { Operation = Operation.GetKnjiga };
+            client.SendRequest(request);
+            return (List<Knjiga>)client.GetResponseResult();
+        }
+
+        internal List<Knjiga> GetKnjigaWithCondition(Knjiga knjiga)
+        {
+            Request request = new Request() { Operation = Operation.GetKnjigaWithCondition, RequestObject = knjiga };
+            client.SendRequest(request);
+            return (List<Knjiga>)client.GetResponseResult();
+        }
+
+        internal Knjiga GetOneKnjiga(Knjiga knjiga)
+        {
+            Request request = new Request() { Operation = Operation.GetOneKnjiga, RequestObject = knjiga };
+            client.SendRequest(request);
+            return (Knjiga)client.GetResponseResult();
+        }
+
+        internal void DeleteKnjiga(Knjiga knjiga)
+        {
+            Request request = new Request() { Operation = Operation.DeleteKnjiga, RequestObject = knjiga };
+            client.SendRequest(request);
+            client.GetResponseResult();
+        }
+
+        internal void SaveIznajmljivanje(Iznajmljivanje iznajmljivanje)
+        {
+            Request request = new Request() { Operation = Operation.SaveIznajmljivanje, RequestObject = iznajmljivanje };
+            client.SendRequest(request);
+            client.GetResponseResult();
+        }
+
+        internal List<Iznajmljivanje> GetIznajmljivanje()
+        {
+            Request request = new Request() { Operation = Operation.GetIznajmljivanje };
+            client.SendRequest(request);
+            return (List<Iznajmljivanje>)client.GetResponseResult();
+        }
+
+        /*internal List<StavkaIznajmljivanja> GetStavkeIznajmljivanja()
+        {
+            Request request = new Request() { Operation = Operation.GetStavkeIznajmljivanja };
+            client.SendRequest(request);
+            return (List<StavkaIznajmljivanja>)client.GetResponseResult();
+        }*/
+
+        internal List<Iznajmljivanje> GetIznajmljivanjeWithCondition(Iznajmljivanje iznajmljivanje)
+        {
+            Request request = new Request() { Operation = Operation.GetIznajmljivanjeWithCondition, RequestObject = iznajmljivanje };
+            client.SendRequest(request);
+            return (List<Iznajmljivanje>)client.GetResponseResult();
+        }
+
+        internal Iznajmljivanje GetOneIznajmljivanje(Iznajmljivanje iznajmljivanje)
+        {
+            Request request = new Request() { Operation = Operation.GetOneIznajmljivanje, RequestObject = iznajmljivanje };
+            client.SendRequest(request);
+            return (Iznajmljivanje)client.GetResponseResult();
+        }
+
+        internal void DeleteIznajmljivanje(Iznajmljivanje iznajmljivanje)
+        {
+            Request request = new Request() { Operation = Operation.DeleteIznajmljivanje, RequestObject = iznajmljivanje };
+            client.SendRequest(request);
+            client.GetResponseResult();
+        }
+
         //implementiraju se sistemske operacije
     }
 }
