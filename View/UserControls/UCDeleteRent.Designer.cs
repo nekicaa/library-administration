@@ -30,6 +30,7 @@
         {
             this.btnOdaberi = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnObrisi = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.txtClan = new System.Windows.Forms.TextBox();
             this.txtRokRazduzivanja = new System.Windows.Forms.TextBox();
@@ -41,7 +42,6 @@
             this.dgvIznajmljivanja = new System.Windows.Forms.DataGridView();
             this.txtFilter = new System.Windows.Forms.TextBox();
             this.btnPretrazi = new System.Windows.Forms.Button();
-            this.btnObrisi = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvStavke)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvIznajmljivanja)).BeginInit();
@@ -55,6 +55,7 @@
             this.btnOdaberi.TabIndex = 10;
             this.btnOdaberi.Text = "Prikazi";
             this.btnOdaberi.UseVisualStyleBackColor = true;
+            this.btnOdaberi.Click += new System.EventHandler(this.btnOdaberi_Click);
             // 
             // groupBox1
             // 
@@ -72,6 +73,17 @@
             this.groupBox1.Size = new System.Drawing.Size(373, 418);
             this.groupBox1.TabIndex = 9;
             this.groupBox1.TabStop = false;
+            // 
+            // btnObrisi
+            // 
+            this.btnObrisi.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnObrisi.Location = new System.Drawing.Point(105, 368);
+            this.btnObrisi.Name = "btnObrisi";
+            this.btnObrisi.Size = new System.Drawing.Size(163, 23);
+            this.btnObrisi.TabIndex = 14;
+            this.btnObrisi.Text = "Obrisi iznajmljivanje";
+            this.btnObrisi.UseVisualStyleBackColor = true;
+            this.btnObrisi.Click += new System.EventHandler(this.btnObrisi_Click);
             // 
             // label1
             // 
@@ -168,16 +180,7 @@
             this.btnPretrazi.TabIndex = 6;
             this.btnPretrazi.Text = "Pretrazi ";
             this.btnPretrazi.UseVisualStyleBackColor = true;
-            // 
-            // btnObrisi
-            // 
-            this.btnObrisi.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnObrisi.Location = new System.Drawing.Point(105, 368);
-            this.btnObrisi.Name = "btnObrisi";
-            this.btnObrisi.Size = new System.Drawing.Size(163, 23);
-            this.btnObrisi.TabIndex = 14;
-            this.btnObrisi.Text = "Obrisi iznajmljivanje";
-            this.btnObrisi.UseVisualStyleBackColor = true;
+            this.btnPretrazi.Click += new System.EventHandler(this.btnPretrazi_Click);
             // 
             // UCDeleteRent
             // 
@@ -191,6 +194,7 @@
             this.Controls.Add(this.btnPretrazi);
             this.Name = "UCDeleteRent";
             this.Size = new System.Drawing.Size(741, 419);
+            this.Load += new System.EventHandler(this.UCDeleteRent_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvStavke)).EndInit();

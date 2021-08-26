@@ -33,14 +33,14 @@
             this.dgvIznajmljivanja = new System.Windows.Forms.DataGridView();
             this.dgvStavke = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.btnOdaberi = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtClan = new System.Windows.Forms.TextBox();
             this.txtRokRazduzivanja = new System.Windows.Forms.TextBox();
             this.txtDatIznajmljivanja = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.txtClan = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.btnOdaberi = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvIznajmljivanja)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvStavke)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -54,6 +54,7 @@
             this.btnPretrazi.TabIndex = 0;
             this.btnPretrazi.Text = "Pretrazi ";
             this.btnPretrazi.UseVisualStyleBackColor = true;
+            this.btnPretrazi.Click += new System.EventHandler(this.btnPretrazi_Click);
             // 
             // txtFilter
             // 
@@ -97,14 +98,23 @@
             this.groupBox1.TabIndex = 4;
             this.groupBox1.TabStop = false;
             // 
-            // btnOdaberi
+            // label1
             // 
-            this.btnOdaberi.Location = new System.Drawing.Point(238, 371);
-            this.btnOdaberi.Name = "btnOdaberi";
-            this.btnOdaberi.Size = new System.Drawing.Size(97, 23);
-            this.btnOdaberi.TabIndex = 5;
-            this.btnOdaberi.Text = "Prikazi";
-            this.btnOdaberi.UseVisualStyleBackColor = true;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(135, 27);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(102, 16);
+            this.label1.TabIndex = 13;
+            this.label1.Text = "Iznajmljivanje";
+            // 
+            // txtClan
+            // 
+            this.txtClan.Location = new System.Drawing.Point(169, 142);
+            this.txtClan.Name = "txtClan";
+            this.txtClan.ReadOnly = true;
+            this.txtClan.Size = new System.Drawing.Size(161, 20);
+            this.txtClan.TabIndex = 12;
             // 
             // txtRokRazduzivanja
             // 
@@ -149,23 +159,15 @@
             this.label2.TabIndex = 7;
             this.label2.Text = "Datum iznajmljivanja";
             // 
-            // txtClan
+            // btnOdaberi
             // 
-            this.txtClan.Location = new System.Drawing.Point(169, 142);
-            this.txtClan.Name = "txtClan";
-            this.txtClan.ReadOnly = true;
-            this.txtClan.Size = new System.Drawing.Size(161, 20);
-            this.txtClan.TabIndex = 12;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(135, 27);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(102, 16);
-            this.label1.TabIndex = 13;
-            this.label1.Text = "Iznajmljivanje";
+            this.btnOdaberi.Location = new System.Drawing.Point(238, 371);
+            this.btnOdaberi.Name = "btnOdaberi";
+            this.btnOdaberi.Size = new System.Drawing.Size(97, 23);
+            this.btnOdaberi.TabIndex = 5;
+            this.btnOdaberi.Text = "Prikazi";
+            this.btnOdaberi.UseVisualStyleBackColor = true;
+            this.btnOdaberi.Click += new System.EventHandler(this.btnOdaberi_Click);
             // 
             // UCSearchRent
             // 
@@ -179,6 +181,7 @@
             this.Controls.Add(this.btnPretrazi);
             this.Name = "UCSearchRent";
             this.Size = new System.Drawing.Size(750, 424);
+            this.Load += new System.EventHandler(this.UCSearchRent_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvIznajmljivanja)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvStavke)).EndInit();
             this.groupBox1.ResumeLayout(false);

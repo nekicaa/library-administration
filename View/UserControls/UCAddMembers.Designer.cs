@@ -44,7 +44,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(165, 64);
+            this.label1.Location = new System.Drawing.Point(299, 64);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(157, 20);
             this.label1.TabIndex = 0;
@@ -53,7 +53,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(59, 130);
+            this.label2.Location = new System.Drawing.Point(193, 130);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(24, 13);
             this.label2.TabIndex = 1;
@@ -62,7 +62,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(59, 174);
+            this.label3.Location = new System.Drawing.Point(193, 174);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(44, 13);
             this.label3.TabIndex = 2;
@@ -71,7 +71,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(59, 219);
+            this.label4.Location = new System.Drawing.Point(193, 219);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(78, 13);
             this.label4.TabIndex = 3;
@@ -80,7 +80,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(59, 264);
+            this.label5.Location = new System.Drawing.Point(193, 264);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(44, 13);
             this.label5.TabIndex = 4;
@@ -88,40 +88,41 @@
             // 
             // txtIme
             // 
-            this.txtIme.Location = new System.Drawing.Point(155, 127);
+            this.txtIme.Location = new System.Drawing.Point(289, 127);
             this.txtIme.Name = "txtIme";
             this.txtIme.Size = new System.Drawing.Size(260, 20);
             this.txtIme.TabIndex = 5;
             // 
             // txtPrezime
             // 
-            this.txtPrezime.Location = new System.Drawing.Point(155, 171);
+            this.txtPrezime.Location = new System.Drawing.Point(289, 171);
             this.txtPrezime.Name = "txtPrezime";
             this.txtPrezime.Size = new System.Drawing.Size(260, 20);
             this.txtPrezime.TabIndex = 6;
             // 
             // txtDatRodjenja
             // 
-            this.txtDatRodjenja.Location = new System.Drawing.Point(155, 216);
+            this.txtDatRodjenja.Location = new System.Drawing.Point(289, 216);
             this.txtDatRodjenja.Name = "txtDatRodjenja";
             this.txtDatRodjenja.Size = new System.Drawing.Size(260, 20);
             this.txtDatRodjenja.TabIndex = 7;
             // 
             // txtKontakt
             // 
-            this.txtKontakt.Location = new System.Drawing.Point(155, 261);
+            this.txtKontakt.Location = new System.Drawing.Point(289, 261);
             this.txtKontakt.Name = "txtKontakt";
             this.txtKontakt.Size = new System.Drawing.Size(260, 20);
             this.txtKontakt.TabIndex = 8;
             // 
             // btnSacuvaj
             // 
-            this.btnSacuvaj.Location = new System.Drawing.Point(183, 324);
+            this.btnSacuvaj.Location = new System.Drawing.Point(317, 324);
             this.btnSacuvaj.Name = "btnSacuvaj";
             this.btnSacuvaj.Size = new System.Drawing.Size(107, 23);
             this.btnSacuvaj.TabIndex = 9;
             this.btnSacuvaj.Text = "Sacuvaj";
             this.btnSacuvaj.UseVisualStyleBackColor = true;
+            this.btnSacuvaj.Click += new System.EventHandler(this.btnSacuvaj_Click);
             // 
             // UCAddMembers
             // 
@@ -139,7 +140,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "UCAddMembers";
-            this.Size = new System.Drawing.Size(532, 423);
+            this.Size = new System.Drawing.Size(774, 429);
             this.ResumeLayout(false);
             this.PerformLayout();
 

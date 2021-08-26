@@ -33,6 +33,7 @@
             this.dgvKnjige = new System.Windows.Forms.DataGridView();
             this.btnOdaberi = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txtAutor = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.txtGodStampe = new System.Windows.Forms.TextBox();
             this.txtZanr = new System.Windows.Forms.TextBox();
@@ -46,7 +47,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.lblNaslov = new System.Windows.Forms.Label();
-            this.txtAutor = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvKnjige)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -66,6 +66,7 @@
             this.btnPretrazi.TabIndex = 1;
             this.btnPretrazi.Text = "Pretrazi knjige";
             this.btnPretrazi.UseVisualStyleBackColor = true;
+            this.btnPretrazi.Click += new System.EventHandler(this.btnPretrazi_Click);
             // 
             // dgvKnjige
             // 
@@ -83,6 +84,7 @@
             this.btnOdaberi.TabIndex = 3;
             this.btnOdaberi.Text = "Prikazi knjigu";
             this.btnOdaberi.UseVisualStyleBackColor = true;
+            this.btnOdaberi.Click += new System.EventHandler(this.btnOdaberi_Click);
             // 
             // groupBox1
             // 
@@ -105,6 +107,14 @@
             this.groupBox1.Size = new System.Drawing.Size(406, 416);
             this.groupBox1.TabIndex = 4;
             this.groupBox1.TabStop = false;
+            // 
+            // txtAutor
+            // 
+            this.txtAutor.Location = new System.Drawing.Point(149, 268);
+            this.txtAutor.Name = "txtAutor";
+            this.txtAutor.ReadOnly = true;
+            this.txtAutor.Size = new System.Drawing.Size(191, 20);
+            this.txtAutor.TabIndex = 16;
             // 
             // label1
             // 
@@ -219,14 +229,6 @@
             this.lblNaslov.TabIndex = 0;
             this.lblNaslov.Text = "Knjiga ";
             // 
-            // txtAutor
-            // 
-            this.txtAutor.Location = new System.Drawing.Point(149, 268);
-            this.txtAutor.Name = "txtAutor";
-            this.txtAutor.ReadOnly = true;
-            this.txtAutor.Size = new System.Drawing.Size(191, 20);
-            this.txtAutor.TabIndex = 16;
-            // 
             // UCSearchBook
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -239,6 +241,7 @@
             this.Controls.Add(this.txtFilter);
             this.Name = "UCSearchBook";
             this.Size = new System.Drawing.Size(778, 416);
+            this.Load += new System.EventHandler(this.UCSearchBook_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvKnjige)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

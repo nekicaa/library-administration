@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnObrisi = new System.Windows.Forms.Button();
             this.txtZanr = new System.Windows.Forms.TextBox();
             this.txtISBN = new System.Windows.Forms.TextBox();
             this.txtNaziv = new System.Windows.Forms.TextBox();
@@ -40,7 +41,6 @@
             this.dgvKnjige = new System.Windows.Forms.DataGridView();
             this.btnPretrazi = new System.Windows.Forms.Button();
             this.txtFilter = new System.Windows.Forms.TextBox();
-            this.btnObrisi = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvKnjige)).BeginInit();
             this.SuspendLayout();
@@ -60,6 +60,16 @@
             this.groupBox1.Size = new System.Drawing.Size(406, 416);
             this.groupBox1.TabIndex = 9;
             this.groupBox1.TabStop = false;
+            // 
+            // btnObrisi
+            // 
+            this.btnObrisi.Location = new System.Drawing.Point(149, 322);
+            this.btnObrisi.Name = "btnObrisi";
+            this.btnObrisi.Size = new System.Drawing.Size(100, 23);
+            this.btnObrisi.TabIndex = 14;
+            this.btnObrisi.Text = "Obrisi knjigu";
+            this.btnObrisi.UseVisualStyleBackColor = true;
+            this.btnObrisi.Click += new System.EventHandler(this.btnObrisi_Click);
             // 
             // txtZanr
             // 
@@ -130,6 +140,7 @@
             this.btnOdaberi.TabIndex = 8;
             this.btnOdaberi.Text = "Prikazi knjigu";
             this.btnOdaberi.UseVisualStyleBackColor = true;
+            this.btnOdaberi.Click += new System.EventHandler(this.btnOdaberi_Click);
             // 
             // dgvKnjige
             // 
@@ -147,6 +158,7 @@
             this.btnPretrazi.TabIndex = 6;
             this.btnPretrazi.Text = "Pretrazi knjige";
             this.btnPretrazi.UseVisualStyleBackColor = true;
+            this.btnPretrazi.Click += new System.EventHandler(this.btnPretrazi_Click);
             // 
             // txtFilter
             // 
@@ -154,15 +166,6 @@
             this.txtFilter.Name = "txtFilter";
             this.txtFilter.Size = new System.Drawing.Size(169, 20);
             this.txtFilter.TabIndex = 5;
-            // 
-            // btnObrisi
-            // 
-            this.btnObrisi.Location = new System.Drawing.Point(149, 322);
-            this.btnObrisi.Name = "btnObrisi";
-            this.btnObrisi.Size = new System.Drawing.Size(100, 23);
-            this.btnObrisi.TabIndex = 14;
-            this.btnObrisi.Text = "Obrisi knjigu";
-            this.btnObrisi.UseVisualStyleBackColor = true;
             // 
             // UCDeleteBook
             // 
@@ -176,6 +179,7 @@
             this.Controls.Add(this.txtFilter);
             this.Name = "UCDeleteBook";
             this.Size = new System.Drawing.Size(776, 415);
+            this.Load += new System.EventHandler(this.UCDeleteBook_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvKnjige)).EndInit();

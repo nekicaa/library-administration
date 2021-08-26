@@ -33,6 +33,8 @@
             this.dgvClanovi = new System.Windows.Forms.DataGridView();
             this.btnOdaberi = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.btnIzmeni = new System.Windows.Forms.Button();
             this.txtKontakt = new System.Windows.Forms.TextBox();
             this.txtDatRodjenja = new System.Windows.Forms.TextBox();
             this.txtPrezime = new System.Windows.Forms.TextBox();
@@ -41,8 +43,6 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.btnIzmeni = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvClanovi)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -62,6 +62,7 @@
             this.btnPretrazi.TabIndex = 1;
             this.btnPretrazi.Text = "Pretrazi clanove";
             this.btnPretrazi.UseVisualStyleBackColor = true;
+            this.btnPretrazi.Click += new System.EventHandler(this.btnPretrazi_Click);
             // 
             // dgvClanovi
             // 
@@ -79,6 +80,7 @@
             this.btnOdaberi.TabIndex = 3;
             this.btnOdaberi.Text = "Odaberi clana";
             this.btnOdaberi.UseVisualStyleBackColor = true;
+            this.btnOdaberi.Click += new System.EventHandler(this.btnOdaberi_Click);
             // 
             // groupBox1
             // 
@@ -97,6 +99,26 @@
             this.groupBox1.Size = new System.Drawing.Size(360, 417);
             this.groupBox1.TabIndex = 4;
             this.groupBox1.TabStop = false;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(126, 50);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(94, 16);
+            this.label1.TabIndex = 18;
+            this.label1.Text = "Izmeni clana";
+            // 
+            // btnIzmeni
+            // 
+            this.btnIzmeni.Location = new System.Drawing.Point(126, 333);
+            this.btnIzmeni.Name = "btnIzmeni";
+            this.btnIzmeni.Size = new System.Drawing.Size(119, 23);
+            this.btnIzmeni.TabIndex = 17;
+            this.btnIzmeni.Text = "Izmeni";
+            this.btnIzmeni.UseVisualStyleBackColor = true;
+            this.btnIzmeni.Click += new System.EventHandler(this.btnIzmeni_Click);
             // 
             // txtKontakt
             // 
@@ -162,25 +184,6 @@
             this.label2.TabIndex = 9;
             this.label2.Text = "Ime";
             // 
-            // btnIzmeni
-            // 
-            this.btnIzmeni.Location = new System.Drawing.Point(126, 333);
-            this.btnIzmeni.Name = "btnIzmeni";
-            this.btnIzmeni.Size = new System.Drawing.Size(119, 23);
-            this.btnIzmeni.TabIndex = 17;
-            this.btnIzmeni.Text = "Izmeni";
-            this.btnIzmeni.UseVisualStyleBackColor = true;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(126, 50);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(94, 16);
-            this.label1.TabIndex = 18;
-            this.label1.Text = "Izmeni clana";
-            // 
             // UCChangeMember
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -193,6 +196,7 @@
             this.Controls.Add(this.txtFilter);
             this.Name = "UCChangeMember";
             this.Size = new System.Drawing.Size(762, 423);
+            this.Load += new System.EventHandler(this.UCChangeMember_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvClanovi)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

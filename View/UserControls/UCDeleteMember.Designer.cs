@@ -30,7 +30,7 @@
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnIzmeni = new System.Windows.Forms.Button();
+            this.btnObrisi = new System.Windows.Forms.Button();
             this.txtKontakt = new System.Windows.Forms.TextBox();
             this.txtDatRodjenja = new System.Windows.Forms.TextBox();
             this.txtPrezime = new System.Windows.Forms.TextBox();
@@ -50,7 +50,7 @@
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.btnIzmeni);
+            this.groupBox1.Controls.Add(this.btnObrisi);
             this.groupBox1.Controls.Add(this.txtKontakt);
             this.groupBox1.Controls.Add(this.txtDatRodjenja);
             this.groupBox1.Controls.Add(this.txtPrezime);
@@ -75,14 +75,15 @@
             this.label1.TabIndex = 18;
             this.label1.Text = "Obrisi clana";
             // 
-            // btnIzmeni
+            // btnObrisi
             // 
-            this.btnIzmeni.Location = new System.Drawing.Point(126, 333);
-            this.btnIzmeni.Name = "btnIzmeni";
-            this.btnIzmeni.Size = new System.Drawing.Size(119, 23);
-            this.btnIzmeni.TabIndex = 17;
-            this.btnIzmeni.Text = "Obrisi";
-            this.btnIzmeni.UseVisualStyleBackColor = true;
+            this.btnObrisi.Location = new System.Drawing.Point(126, 333);
+            this.btnObrisi.Name = "btnObrisi";
+            this.btnObrisi.Size = new System.Drawing.Size(119, 23);
+            this.btnObrisi.TabIndex = 17;
+            this.btnObrisi.Text = "Obrisi";
+            this.btnObrisi.UseVisualStyleBackColor = true;
+            this.btnObrisi.Click += new System.EventHandler(this.btnObrisi_Click);
             // 
             // txtKontakt
             // 
@@ -160,6 +161,7 @@
             this.btnOdaberi.TabIndex = 8;
             this.btnOdaberi.Text = "Odaberi clana";
             this.btnOdaberi.UseVisualStyleBackColor = true;
+            this.btnOdaberi.Click += new System.EventHandler(this.btnOdaberi_Click);
             // 
             // dgvClanovi
             // 
@@ -177,6 +179,7 @@
             this.btnPretrazi.TabIndex = 6;
             this.btnPretrazi.Text = "Pretrazi clanove";
             this.btnPretrazi.UseVisualStyleBackColor = true;
+            this.btnPretrazi.Click += new System.EventHandler(this.btnPretrazi_Click);
             // 
             // txtFilter
             // 
@@ -197,6 +200,7 @@
             this.Controls.Add(this.txtFilter);
             this.Name = "UCDeleteMember";
             this.Size = new System.Drawing.Size(765, 420);
+            this.Load += new System.EventHandler(this.UCDeleteMember_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvClanovi)).EndInit();
@@ -209,7 +213,7 @@
 
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button btnIzmeni;
+        private System.Windows.Forms.Button btnObrisi;
         private System.Windows.Forms.TextBox txtKontakt;
         private System.Windows.Forms.TextBox txtDatRodjenja;
         private System.Windows.Forms.TextBox txtPrezime;

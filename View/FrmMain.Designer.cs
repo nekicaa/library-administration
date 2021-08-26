@@ -33,11 +33,11 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.knjigeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dodajNovuKnjiguToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.izmeniKnjiguToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pretraziKnjigeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.obrisiKnjiguToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.clanoviToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dodajNovogClanaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.pretraziClanoveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.izmeniClanaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.obrisiClanaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.iznajmljivanjaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.napraviNovoIznajmljivanjeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -82,7 +82,7 @@
             // 
             this.knjigeToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.dodajNovuKnjiguToolStripMenuItem,
-            this.izmeniKnjiguToolStripMenuItem,
+            this.pretraziKnjigeToolStripMenuItem,
             this.obrisiKnjiguToolStripMenuItem});
             this.knjigeToolStripMenuItem.Name = "knjigeToolStripMenuItem";
             this.knjigeToolStripMenuItem.Size = new System.Drawing.Size(52, 20);
@@ -91,26 +91,29 @@
             // dodajNovuKnjiguToolStripMenuItem
             // 
             this.dodajNovuKnjiguToolStripMenuItem.Name = "dodajNovuKnjiguToolStripMenuItem";
-            this.dodajNovuKnjiguToolStripMenuItem.Size = new System.Drawing.Size(171, 22);
+            this.dodajNovuKnjiguToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.dodajNovuKnjiguToolStripMenuItem.Text = "Dodaj novu knjigu";
+            this.dodajNovuKnjiguToolStripMenuItem.Click += new System.EventHandler(this.dodajNovuKnjiguToolStripMenuItem_Click);
             // 
-            // izmeniKnjiguToolStripMenuItem
+            // pretraziKnjigeToolStripMenuItem
             // 
-            this.izmeniKnjiguToolStripMenuItem.Name = "izmeniKnjiguToolStripMenuItem";
-            this.izmeniKnjiguToolStripMenuItem.Size = new System.Drawing.Size(171, 22);
-            this.izmeniKnjiguToolStripMenuItem.Text = "Izmeni knjigu";
+            this.pretraziKnjigeToolStripMenuItem.Name = "pretraziKnjigeToolStripMenuItem";
+            this.pretraziKnjigeToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.pretraziKnjigeToolStripMenuItem.Text = "Pretrazi knjige";
+            this.pretraziKnjigeToolStripMenuItem.Click += new System.EventHandler(this.pretraziKnjigeToolStripMenuItem_Click);
             // 
             // obrisiKnjiguToolStripMenuItem
             // 
             this.obrisiKnjiguToolStripMenuItem.Name = "obrisiKnjiguToolStripMenuItem";
-            this.obrisiKnjiguToolStripMenuItem.Size = new System.Drawing.Size(171, 22);
+            this.obrisiKnjiguToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.obrisiKnjiguToolStripMenuItem.Text = "Obrisi knjigu";
+            this.obrisiKnjiguToolStripMenuItem.Click += new System.EventHandler(this.obrisiKnjiguToolStripMenuItem_Click);
             // 
             // clanoviToolStripMenuItem
             // 
             this.clanoviToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.dodajNovogClanaToolStripMenuItem,
-            this.pretraziClanoveToolStripMenuItem,
+            this.izmeniClanaToolStripMenuItem,
             this.obrisiClanaToolStripMenuItem});
             this.clanoviToolStripMenuItem.Name = "clanoviToolStripMenuItem";
             this.clanoviToolStripMenuItem.Size = new System.Drawing.Size(59, 20);
@@ -119,20 +122,23 @@
             // dodajNovogClanaToolStripMenuItem
             // 
             this.dodajNovogClanaToolStripMenuItem.Name = "dodajNovogClanaToolStripMenuItem";
-            this.dodajNovogClanaToolStripMenuItem.Size = new System.Drawing.Size(173, 22);
+            this.dodajNovogClanaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.dodajNovogClanaToolStripMenuItem.Text = "Dodaj novog clana";
+            this.dodajNovogClanaToolStripMenuItem.Click += new System.EventHandler(this.dodajNovogClanaToolStripMenuItem_Click);
             // 
-            // pretraziClanoveToolStripMenuItem
+            // izmeniClanaToolStripMenuItem
             // 
-            this.pretraziClanoveToolStripMenuItem.Name = "pretraziClanoveToolStripMenuItem";
-            this.pretraziClanoveToolStripMenuItem.Size = new System.Drawing.Size(173, 22);
-            this.pretraziClanoveToolStripMenuItem.Text = "Pretrazi clanove";
+            this.izmeniClanaToolStripMenuItem.Name = "izmeniClanaToolStripMenuItem";
+            this.izmeniClanaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.izmeniClanaToolStripMenuItem.Text = "Izmeni clana";
+            this.izmeniClanaToolStripMenuItem.Click += new System.EventHandler(this.izmeniClanaToolStripMenuItem_Click);
             // 
             // obrisiClanaToolStripMenuItem
             // 
             this.obrisiClanaToolStripMenuItem.Name = "obrisiClanaToolStripMenuItem";
-            this.obrisiClanaToolStripMenuItem.Size = new System.Drawing.Size(173, 22);
+            this.obrisiClanaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.obrisiClanaToolStripMenuItem.Text = "Obrisi clana";
+            this.obrisiClanaToolStripMenuItem.Click += new System.EventHandler(this.obrisiClanaToolStripMenuItem_Click);
             // 
             // iznajmljivanjaToolStripMenuItem
             // 
@@ -149,18 +155,21 @@
             this.napraviNovoIznajmljivanjeToolStripMenuItem.Name = "napraviNovoIznajmljivanjeToolStripMenuItem";
             this.napraviNovoIznajmljivanjeToolStripMenuItem.Size = new System.Drawing.Size(220, 22);
             this.napraviNovoIznajmljivanjeToolStripMenuItem.Text = "Napravi novo iznajmljivanje";
+            this.napraviNovoIznajmljivanjeToolStripMenuItem.Click += new System.EventHandler(this.napraviNovoIznajmljivanjeToolStripMenuItem_Click);
             // 
             // pretragaIznajmljenihKnjigaToolStripMenuItem
             // 
             this.pretragaIznajmljenihKnjigaToolStripMenuItem.Name = "pretragaIznajmljenihKnjigaToolStripMenuItem";
             this.pretragaIznajmljenihKnjigaToolStripMenuItem.Size = new System.Drawing.Size(220, 22);
             this.pretragaIznajmljenihKnjigaToolStripMenuItem.Text = "Pretraga iznajmljenih knjiga";
+            this.pretragaIznajmljenihKnjigaToolStripMenuItem.Click += new System.EventHandler(this.pretragaIznajmljenihKnjigaToolStripMenuItem_Click);
             // 
             // razduzivanjeKnjigaToolStripMenuItem
             // 
             this.razduzivanjeKnjigaToolStripMenuItem.Name = "razduzivanjeKnjigaToolStripMenuItem";
             this.razduzivanjeKnjigaToolStripMenuItem.Size = new System.Drawing.Size(220, 22);
             this.razduzivanjeKnjigaToolStripMenuItem.Text = "Razduzivanje knjiga";
+            this.razduzivanjeKnjigaToolStripMenuItem.Click += new System.EventHandler(this.razduzivanjeKnjigaToolStripMenuItem_Click);
             // 
             // FrmMain
             // 
@@ -187,11 +196,11 @@
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem knjigeToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem dodajNovuKnjiguToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem izmeniKnjiguToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem pretraziKnjigeToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem obrisiKnjiguToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem clanoviToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem dodajNovogClanaToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem pretraziClanoveToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem izmeniClanaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem obrisiClanaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem iznajmljivanjaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem napraviNovoIznajmljivanjeToolStripMenuItem;
