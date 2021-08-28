@@ -18,7 +18,7 @@ namespace View.UserControls
         public UCAddRent()
         {
             InitializeComponent();
-            mainController.InitDataGridView(dgvStavke);
+            mainController.InitDgvStavke(dgvStavke);
         }
 
         private void btnSacuvaj_Click(object sender, EventArgs e)

@@ -39,7 +39,7 @@ namespace View.UserControls
 
         private void btnObrisi_Click(object sender, EventArgs e)
         {
-            mainController.RemoveKnjiga(dgvKnjige, txtNaziv, txtISBN, txtZanr);
+            mainController.DeleteKnjiga(dgvKnjige);
         }
     }
 }

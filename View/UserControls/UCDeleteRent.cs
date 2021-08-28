@@ -39,7 +39,7 @@ namespace View.UserControls
 
         private void btnObrisi_Click(object sender, EventArgs e)
         {
-            mainController.RemoveIznajmljivanje(dgvIznajmljivanja, txtDatIznajmljivanja, txtRokRazduzivanja, txtClan, dgvStavke);
+            mainController.DeleteIznajmljivanje(dgvIznajmljivanja);
         }
     }
 }

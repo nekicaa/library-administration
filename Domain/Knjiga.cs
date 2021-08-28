@@ -11,6 +11,7 @@ namespace Domain
     [Serializable]
     public class Knjiga : IEntity
     {
+        [Browsable(false)]
         public int Id { get; set; }
         public string Naziv { get; set; }
         public string ISBN { get; set; }

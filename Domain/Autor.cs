@@ -11,6 +11,7 @@ namespace Domain
     [Serializable]
     public class Autor : IEntity
     {
+        [Browsable(false)]
         public int Id { get; set; }
         public string Ime { get; set; }
         public string Prezime { get; set; }

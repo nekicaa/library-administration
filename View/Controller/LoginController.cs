@@ -32,14 +32,11 @@ namespace View.Controller
                     {
                         throw new SystemNotFoundException("Administrator je već ulogovan!");
                     }
-                    FrmMain frmMain = new FrmMain();
+                    FrmMain frmMain = new FrmMain(a);
                     MessageBox.Show($"Administrator {a.Ime} {a.Prezime} se uspešno prijavio!");
                     frmMain.FormBorderStyle = FormBorderStyle.FixedDialog;
                     frmLogin.Visible = false;
-                    //MainCoordinator.Instance.OpenMainForm();
                     frmMain.ShowDialog();
-                    //frmLogin.Visible = true;
-                    //frmLogin.Dispose(); 
                 }
                 else throw new SystemNotFoundException();
             }

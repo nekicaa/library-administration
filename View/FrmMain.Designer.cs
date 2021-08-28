@@ -62,9 +62,9 @@
             this.lblWelcome.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblWelcome.Location = new System.Drawing.Point(277, 164);
             this.lblWelcome.Name = "lblWelcome";
-            this.lblWelcome.Size = new System.Drawing.Size(232, 24);
+            this.lblWelcome.Size = new System.Drawing.Size(110, 24);
             this.lblWelcome.TabIndex = 0;
-            this.lblWelcome.Text = "Welcome, Administrator";
+            this.lblWelcome.Text = "Welcome, ";
             // 
             // menuStrip1
             // 
@@ -122,21 +122,21 @@
             // dodajNovogClanaToolStripMenuItem
             // 
             this.dodajNovogClanaToolStripMenuItem.Name = "dodajNovogClanaToolStripMenuItem";
-            this.dodajNovogClanaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.dodajNovogClanaToolStripMenuItem.Size = new System.Drawing.Size(173, 22);
             this.dodajNovogClanaToolStripMenuItem.Text = "Dodaj novog clana";
             this.dodajNovogClanaToolStripMenuItem.Click += new System.EventHandler(this.dodajNovogClanaToolStripMenuItem_Click);
             // 
             // izmeniClanaToolStripMenuItem
             // 
             this.izmeniClanaToolStripMenuItem.Name = "izmeniClanaToolStripMenuItem";
-            this.izmeniClanaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.izmeniClanaToolStripMenuItem.Size = new System.Drawing.Size(173, 22);
             this.izmeniClanaToolStripMenuItem.Text = "Izmeni clana";
             this.izmeniClanaToolStripMenuItem.Click += new System.EventHandler(this.izmeniClanaToolStripMenuItem_Click);
             // 
             // obrisiClanaToolStripMenuItem
             // 
             this.obrisiClanaToolStripMenuItem.Name = "obrisiClanaToolStripMenuItem";
-            this.obrisiClanaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.obrisiClanaToolStripMenuItem.Size = new System.Drawing.Size(173, 22);
             this.obrisiClanaToolStripMenuItem.Text = "Obrisi clana";
             this.obrisiClanaToolStripMenuItem.Click += new System.EventHandler(this.obrisiClanaToolStripMenuItem_Click);
             // 

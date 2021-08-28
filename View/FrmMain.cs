@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Domain;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -14,10 +15,13 @@ namespace View
     public partial class FrmMain : Form
     {
         MainController mainController = new MainController();
+        private readonly Administrator admin;
 
-        public FrmMain()
+        public FrmMain(Administrator a)
         {
             InitializeComponent();
+            lblWelcome.Text += $"{a.Ime} {a.Prezime}!";
+            this.admin = a;
         }
 
         public void SetPanel(UserControl userControl)

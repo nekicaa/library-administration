@@ -22,7 +22,12 @@ namespace View.UserControls
 
         private void btnSacuvaj_Click(object sender, EventArgs e)
         {
-            mainController.SaveMember(txtIme, txtPrezime, txtDatRodjenja, txtKontakt);
+            mainController.SaveClan(txtIme, txtPrezime, txtDatRodjenja, txtKontakt);
+        }
+
+        private void UCAddMembers_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

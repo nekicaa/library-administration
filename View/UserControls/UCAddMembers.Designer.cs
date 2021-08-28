@@ -141,6 +141,7 @@
             this.Controls.Add(this.label1);
             this.Name = "UCAddMembers";
             this.Size = new System.Drawing.Size(774, 429);
+            this.Load += new System.EventHandler(this.UCAddMembers_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

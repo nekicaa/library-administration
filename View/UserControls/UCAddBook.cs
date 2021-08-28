@@ -22,7 +22,7 @@ namespace View.UserControls
 
         private void btnSacuvaj_Click(object sender, EventArgs e)
         {
-            mainController.SaveBook(txtNaziv, txtISBN, txtZanr, cbAutor, txtGodStampe, txtIzdavac);
+            mainController.SaveKnjiga(txtNaziv, txtISBN, txtZanr, cbAutor, txtGodStampe, txtIzdavac);
         }
 
         private void UCAddBook_Load(object sender, EventArgs e)

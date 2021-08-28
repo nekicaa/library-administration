@@ -119,7 +119,7 @@
             // 
             // btnObrisiStavke
             // 
-            this.btnObrisiStavke.Location = new System.Drawing.Point(529, 271);
+            this.btnObrisiStavke.Location = new System.Drawing.Point(529, 267);
             this.btnObrisiStavke.Name = "btnObrisiStavke";
             this.btnObrisiStavke.Size = new System.Drawing.Size(107, 23);
             this.btnObrisiStavke.TabIndex = 8;
@@ -127,18 +127,21 @@
             this.btnObrisiStavke.UseVisualStyleBackColor = true;
             this.btnObrisiStavke.Click += new System.EventHandler(this.btnObrisiStavke_Click);
             // 
-            // dataGridView1
+            // dgvStavke
             // 
+            this.dgvStavke.AllowUserToAddRows = false;
+            this.dgvStavke.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvStavke.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvStavke.Location = new System.Drawing.Point(56, 248);
-            this.dgvStavke.Name = "dataGridView1";
-            this.dgvStavke.Size = new System.Drawing.Size(417, 122);
+            this.dgvStavke.Name = "dgvStavke";
+            this.dgvStavke.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvStavke.Size = new System.Drawing.Size(401, 122);
             this.dgvStavke.TabIndex = 9;
             // 
             // btnSacuvaj
             // 
             this.btnSacuvaj.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSacuvaj.Location = new System.Drawing.Point(529, 331);
+            this.btnSacuvaj.Location = new System.Drawing.Point(529, 332);
             this.btnSacuvaj.Name = "btnSacuvaj";
             this.btnSacuvaj.Size = new System.Drawing.Size(164, 23);
             this.btnSacuvaj.TabIndex = 10;

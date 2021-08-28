@@ -149,6 +149,7 @@
             // dgvStavke
             // 
             this.dgvStavke.AllowUserToAddRows = false;
+            this.dgvStavke.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvStavke.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvStavke.Location = new System.Drawing.Point(45, 191);
             this.dgvStavke.Name = "dgvStavke";
@@ -159,9 +160,11 @@
             // dgvIznajmljivanja
             // 
             this.dgvIznajmljivanja.AllowUserToAddRows = false;
+            this.dgvIznajmljivanja.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvIznajmljivanja.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvIznajmljivanja.Location = new System.Drawing.Point(43, 133);
             this.dgvIznajmljivanja.Name = "dgvIznajmljivanja";
+            this.dgvIznajmljivanja.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvIznajmljivanja.Size = new System.Drawing.Size(285, 209);
             this.dgvIznajmljivanja.TabIndex = 8;
             // 

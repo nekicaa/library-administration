@@ -66,9 +66,12 @@
             // 
             // dgvClanovi
             // 
+            this.dgvClanovi.AllowUserToAddRows = false;
+            this.dgvClanovi.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvClanovi.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvClanovi.Location = new System.Drawing.Point(41, 114);
             this.dgvClanovi.Name = "dgvClanovi";
+            this.dgvClanovi.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvClanovi.Size = new System.Drawing.Size(324, 197);
             this.dgvClanovi.TabIndex = 2;
             // 

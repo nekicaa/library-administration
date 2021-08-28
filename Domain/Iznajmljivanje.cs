@@ -11,6 +11,7 @@ namespace Domain
     [Serializable]
     public class Iznajmljivanje : IEntity
     {
+        [Browsable(false)]
         public int Id { get; set; }
         public DateTime DatumIznajmljivanja { get; set; }
         public DateTime RokZaRazduzivanje { get; set; }
