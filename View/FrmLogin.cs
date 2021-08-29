@@ -39,12 +39,8 @@ namespace View
                 {
 
                     MessageBox.Show(ex.Message);
-                }
-                // this.Visible = false;
-                // FrmMain frmMain = new FrmMain();
-                // frmMain.ShowDialog();
+                }   
             }
-            //this.Visible = true;
         }
 
         private void FrmLogin_FormClosed(object sender, FormClosedEventArgs e)

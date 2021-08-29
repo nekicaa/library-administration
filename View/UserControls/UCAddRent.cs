@@ -23,7 +23,7 @@ namespace View.UserControls
 
         private void btnSacuvaj_Click(object sender, EventArgs e)
         {
-            mainController.SaveIznajmljivanje(txtDatIznajmljivanja, txtRokRazduzivanja, cbClan);
+            mainController.SaveIznajmljivanje(cbClan, dgvStavke);
         }
 
         private void btnDodajStavku_Click(object sender, EventArgs e)
@@ -40,6 +40,8 @@ namespace View.UserControls
         {
             mainController.LoadComboBoxClan(cbClan);
             mainController.LoadComboBoxKnjiga(cbKnjiga);
+            txtDatIznajmljivanja.Text = DateTime.Now.ToString();
+            txtRokRazduzivanja.Text = DateTime.Now.AddDays(14).ToString();
         }
     }
 }

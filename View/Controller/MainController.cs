@@ -18,7 +18,7 @@ namespace View.Controller
     {
         internal void OpenUCAddBook(FrmMain frmMain)
         {
-            frmMain.SetPanel(new UCAddBook());
+            frmMain.SetPanel(new UCAddKnjigaI());
         }
 
         internal void OpenUCSearchBook(FrmMain frmMain)
@@ -111,6 +111,13 @@ namespace View.Controller
         internal void InitDgvStavke(DataGridView dgvStavke)
         {
             dgvStavke.DataSource = stavkeBinding;
+        }
+
+        private BindingList<Izdanje> izdanjeBinding = new BindingList<Izdanje>();
+
+        internal void InitDgvIzdanja(DataGridView dgvIzdanja)
+        {
+            dgvIzdanja.DataSource = izdanjeBinding;
         }
 
         internal void LoadDgvKnjiga(DataGridView dgvKnjige)
@@ -290,7 +297,7 @@ namespace View.Controller
         {
             if(cbKnjiga.SelectedIndex == -1)
             {
-                MessageBox.Show("NIste odabrali knjigu!");
+                MessageBox.Show("Niste odabrali knjigu!");
                 return;
             }
             if (!Helpers.UserControlHelpers.EmptyFieldValidation(txtKolicina) | !Helpers.UserControlHelpers.IntValidation(txtKolicina))
@@ -334,14 +341,112 @@ namespace View.Controller
             }
         }
 
+        internal void AddIzdanje(ComboBox cbAutor, TextBox txtGodStampe, TextBox txtIzdavac, DataGridView dgvIzdanja)
+        {
+            if(cbAutor.SelectedIndex == -1)
+            {
+                MessageBox.Show("Niste odabrali autora!");
+                return;
+            }
+
+            if(!Helpers.UserControlHelpers.EmptyFieldValidation(txtGodStampe) | !Helpers.UserControlHelpers.EmptyFieldValidation(txtIzdavac))
+            {
+                MessageBox.Show("Niste popunili detalje o izdanju!");
+                return;
+            }
+
+            //proveri validaciju
+            if (izdanjeBinding.Any(i => (i.Autor == (Autor)cbAutor.SelectedItem) && (i.GodinaStampe == txtGodStampe.Text) && (i.Izdavac == txtIzdavac.Text)))
+            {
+                MessageBox.Show("Ovo izdanje je vec uneto!");
+                return;
+            } 
+
+            Izdanje izdanje = new Izdanje
+            {
+                Knjiga = new Knjiga(),
+                Autor = (Autor)cbAutor.SelectedItem,
+                RedniBroj = izdanjeBinding.Count + 1,
+                GodinaStampe = txtGodStampe.Text,
+                Izdavac = txtIzdavac.Text
+            };
+            izdanjeBinding.Add(izdanje);
+            MessageBox.Show("Uspesno ste dodali izdanje!");
+            dgvIzdanja.Refresh();
+            txtGodStampe.Text = "";
+            txtIzdavac.Text = "";
+            LoadComboBoxAutor(cbAutor);
+        }
+
+        internal void RemoveIzdanje(DataGridView dgvIzdanja)
+        {
+            foreach(DataGridViewRow row in dgvIzdanja.SelectedRows)
+            {
+                Izdanje izdanje = (Izdanje)row.DataBoundItem;
+                izdanjeBinding.Remove(izdanje);
+            }
+            int i = 1;
+            foreach(Izdanje izdanje in izdanjeBinding)
+            {
+                izdanje.RedniBroj = i;
+                i++;
+            }
+        }
+
+        internal void SaveKnjiga(TextBox txtNaziv, TextBox txtISBN, TextBox txtZanr, DataGridView dgvIzdanja)
+        {
+            try
+            {
+                Knjiga k = new Knjiga
+                {
+                    Naziv = txtNaziv.Text,
+                    ISBN = txtISBN.Text,
+                    Zanr = txtZanr.Text
+                };
+                k.Izdanje = izdanjeBinding.ToList();
+                MessageBox.Show("Knjiga je uspesno sacuvana!");
+                izdanjeBinding.Clear();
+                dgvIzdanja.Refresh();
+            }
+            catch (SystemOperationException ex)
+            {
+                MessageBox.Show("Iznajmljivanje nije sacuvano.\n" + ex.Message);
+            }
+            catch (ServerException ex)
+            {
+                MessageBox.Show("Iznajmljivanje nije sacuvano.\n" + ex.Message);
+            }
+        }
+
         internal void SaveKnjiga(TextBox txtNaziv, TextBox txtISBN, TextBox txtZanr, ComboBox cbAutor, TextBox txtGodStampe, TextBox txtIzdavac)
         {
             //throw new NotImplementedException();
         }
 
-        internal void SaveIznajmljivanje(TextBox txtDatIznajmljivanja, TextBox txtRokRazduzivanja, ComboBox cbClan)
+        internal void SaveIznajmljivanje(ComboBox cbClan, DataGridView dgvStavke)
         {
-            //throw new NotImplementedException();
+            try
+            {
+                Iznajmljivanje iz = new Iznajmljivanje
+                {
+                    DatumIznajmljivanja = DateTime.Now,
+                    RokZaRazduzivanje = DateTime.Now.AddDays(14),
+                    Clan = (Clan)cbClan.SelectedItem
+                };
+                iz.Stavke = stavkeBinding.ToList();
+                MessageBox.Show("Iznajmljivanje sacuvano!");
+                stavkeBinding.Clear();
+                LoadComboBoxClan(cbClan);
+                dgvStavke.Refresh();
+            }
+            catch (SystemOperationException ex)
+            {
+                MessageBox.Show("Iznajmljivanje nije sacuvano.\n" + ex.Message);
+            }
+            catch (ServerException ex)
+            {
+                MessageBox.Show("Iznajmljivanje nije sacuvano.\n" + ex.Message);
+            }
         }
 
         internal void SaveClan(TextBox txtIme, TextBox txtPrezime, TextBox txtDatRodjenja, TextBox txtKontakt)
@@ -431,12 +536,40 @@ namespace View.Controller
 
         internal void DeleteKnjiga(DataGridView dgvKnjige)
         {
-            //throw new NotImplementedException();
+            if(dgvKnjige.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("Morate odabrati knjige!");
+                return;
+            }
+
+            try
+            {
+                Communication.Communication.Instance.DeleteKnjiga((Knjiga)dgvKnjige.SelectedRows[0].DataBoundItem);
+                MessageBox.Show("Uspesno obrisana knjiga!");
+            }
+            catch (SystemOperationException ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         internal void DeleteIznajmljivanje(DataGridView dgvIznajmljivanja)
         {
-            //throw new NotImplementedException();
+            if(dgvIznajmljivanja.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("Morate odabrati iznajmljivanje!");
+                return;
+            }
+
+            try
+            {
+                Communication.Communication.Instance.DeleteIznajmljivanje((Iznajmljivanje)dgvIznajmljivanja.SelectedRows[0].DataBoundItem);
+                MessageBox.Show("Uspesno obrisano iznajmljivanje!");
+            }
+            catch (SystemOperationException ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         internal void DeleteClan(DataGridView dgvClanovi)

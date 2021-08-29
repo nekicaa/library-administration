@@ -76,6 +76,12 @@
     <Compile Include="UserControls\UCAddBook.Designer.cs">
       <DependentUpon>UCAddBook.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\UCAddKnjigaI.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UCAddKnjigaI.Designer.cs">
+      <DependentUpon>UCAddKnjigaI.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\UCAddMembers.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -137,6 +143,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UCAddBook.resx">
       <DependentUpon>UCAddBook.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UCAddKnjigaI.resx">
+      <DependentUpon>UCAddKnjigaI.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UCAddMembers.resx">
       <DependentUpon>UCAddMembers.cs</DependentUpon>

@@ -89,6 +89,7 @@
             // 
             this.txtDatIznajmljivanja.Location = new System.Drawing.Point(204, 92);
             this.txtDatIznajmljivanja.Name = "txtDatIznajmljivanja";
+            this.txtDatIznajmljivanja.ReadOnly = true;
             this.txtDatIznajmljivanja.Size = new System.Drawing.Size(187, 20);
             this.txtDatIznajmljivanja.TabIndex = 4;
             // 
@@ -96,6 +97,7 @@
             // 
             this.txtRokRazduzivanja.Location = new System.Drawing.Point(204, 129);
             this.txtRokRazduzivanja.Name = "txtRokRazduzivanja";
+            this.txtRokRazduzivanja.ReadOnly = true;
             this.txtRokRazduzivanja.Size = new System.Drawing.Size(187, 20);
             this.txtRokRazduzivanja.TabIndex = 5;
             // 
