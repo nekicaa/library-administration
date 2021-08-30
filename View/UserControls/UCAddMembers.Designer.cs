@@ -42,6 +42,7 @@
             // 
             // label1
             // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(299, 64);
@@ -52,6 +53,7 @@
             // 
             // label2
             // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(193, 130);
             this.label2.Name = "label2";
@@ -61,6 +63,7 @@
             // 
             // label3
             // 
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(193, 174);
             this.label3.Name = "label3";
@@ -70,6 +73,7 @@
             // 
             // label4
             // 
+            this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(193, 219);
             this.label4.Name = "label4";
@@ -79,6 +83,7 @@
             // 
             // label5
             // 
+            this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(193, 264);
             this.label5.Name = "label5";
@@ -88,6 +93,7 @@
             // 
             // txtIme
             // 
+            this.txtIme.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtIme.Location = new System.Drawing.Point(289, 127);
             this.txtIme.Name = "txtIme";
             this.txtIme.Size = new System.Drawing.Size(260, 20);
@@ -95,6 +101,7 @@
             // 
             // txtPrezime
             // 
+            this.txtPrezime.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtPrezime.Location = new System.Drawing.Point(289, 171);
             this.txtPrezime.Name = "txtPrezime";
             this.txtPrezime.Size = new System.Drawing.Size(260, 20);
@@ -102,6 +109,7 @@
             // 
             // txtDatRodjenja
             // 
+            this.txtDatRodjenja.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtDatRodjenja.Location = new System.Drawing.Point(289, 216);
             this.txtDatRodjenja.Name = "txtDatRodjenja";
             this.txtDatRodjenja.Size = new System.Drawing.Size(260, 20);
@@ -109,6 +117,7 @@
             // 
             // txtKontakt
             // 
+            this.txtKontakt.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtKontakt.Location = new System.Drawing.Point(289, 261);
             this.txtKontakt.Name = "txtKontakt";
             this.txtKontakt.Size = new System.Drawing.Size(260, 20);
@@ -116,6 +125,7 @@
             // 
             // btnSacuvaj
             // 
+            this.btnSacuvaj.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnSacuvaj.Location = new System.Drawing.Point(317, 324);
             this.btnSacuvaj.Name = "btnSacuvaj";
             this.btnSacuvaj.Size = new System.Drawing.Size(107, 23);

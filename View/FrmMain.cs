@@ -36,6 +36,11 @@ namespace View
             mainController.OpenUCAddBook(this);
         }
 
+        private void dodajIzdanjeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            mainController.OpenUCAddIzdanje(this);
+        }
+
         private void pretraziKnjigeToolStripMenuItem_Click(object sender, EventArgs e)
         {
             mainController.OpenUCSearchBook(this);

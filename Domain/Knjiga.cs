@@ -16,8 +16,6 @@ namespace Domain
         public string Naziv { get; set; }
         public string ISBN { get; set; }
         public string Zanr { get; set; }
-        [Browsable(false)]
-        public List<Izdanje> Izdanje { get; set; }  // da li lista ili samo jedno izdanje
         
         [Browsable(false)]
         public string TableName => "Knjiga";

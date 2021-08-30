@@ -84,6 +84,7 @@
             this.Controls.Add(this.btnZaustavi);
             this.Controls.Add(this.btnPokreni);
             this.Name = "FrmServer";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "[Server]";
             this.Load += new System.EventHandler(this.FrmServer_Load);
             this.ResumeLayout(false);

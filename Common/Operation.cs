@@ -21,9 +21,9 @@ namespace Common
         GetKnjigaWithCondition,
         GetOneKnjiga,
         DeleteKnjiga,
+        SaveIzdanje,
         SaveIznajmljivanje,
         GetIznajmljivanje,
-        //GetStavkeIznajmljivanja,
         GetIznajmljivanjeWithCondition,
         GetOneIznajmljivanje,
         DeleteIznajmljivanje

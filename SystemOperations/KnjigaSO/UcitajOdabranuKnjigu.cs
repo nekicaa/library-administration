@@ -14,9 +14,6 @@ namespace SystemOperations.KnjigaSO
         protected override void ExecuteOperation(IEntity entity)
         {
             Result = repository.GetAllWithCondition(entity).Cast<Knjiga>().ToList()[0];
-            Izdanje i = new Izdanje();
-            i.Uslov = $"i.KnjigaId={Result.Id}";
-            Result.Izdanje = repository.GetAllWithCondition(i).Cast<Izdanje>().ToList();
         }
     }
 }

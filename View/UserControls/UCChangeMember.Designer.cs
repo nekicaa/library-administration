@@ -49,6 +49,7 @@
             // 
             // txtFilter
             // 
+            this.txtFilter.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtFilter.Location = new System.Drawing.Point(41, 53);
             this.txtFilter.Name = "txtFilter";
             this.txtFilter.Size = new System.Drawing.Size(203, 20);
@@ -56,6 +57,7 @@
             // 
             // btnPretrazi
             // 
+            this.btnPretrazi.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnPretrazi.Location = new System.Drawing.Point(264, 52);
             this.btnPretrazi.Name = "btnPretrazi";
             this.btnPretrazi.Size = new System.Drawing.Size(101, 23);
@@ -67,6 +69,7 @@
             // dgvClanovi
             // 
             this.dgvClanovi.AllowUserToAddRows = false;
+            this.dgvClanovi.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dgvClanovi.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvClanovi.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvClanovi.Location = new System.Drawing.Point(41, 114);
@@ -77,6 +80,7 @@
             // 
             // btnOdaberi
             // 
+            this.btnOdaberi.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnOdaberi.Location = new System.Drawing.Point(264, 336);
             this.btnOdaberi.Name = "btnOdaberi";
             this.btnOdaberi.Size = new System.Drawing.Size(101, 23);
@@ -87,6 +91,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.btnIzmeni);
             this.groupBox1.Controls.Add(this.txtKontakt);
@@ -105,6 +110,7 @@
             // 
             // label1
             // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(126, 50);
@@ -115,6 +121,7 @@
             // 
             // btnIzmeni
             // 
+            this.btnIzmeni.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnIzmeni.Location = new System.Drawing.Point(126, 333);
             this.btnIzmeni.Name = "btnIzmeni";
             this.btnIzmeni.Size = new System.Drawing.Size(119, 23);
@@ -125,6 +132,7 @@
             // 
             // txtKontakt
             // 
+            this.txtKontakt.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtKontakt.Location = new System.Drawing.Point(126, 242);
             this.txtKontakt.Name = "txtKontakt";
             this.txtKontakt.Size = new System.Drawing.Size(197, 20);
@@ -132,6 +140,7 @@
             // 
             // txtDatRodjenja
             // 
+            this.txtDatRodjenja.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtDatRodjenja.Location = new System.Drawing.Point(126, 197);
             this.txtDatRodjenja.Name = "txtDatRodjenja";
             this.txtDatRodjenja.Size = new System.Drawing.Size(197, 20);
@@ -139,6 +148,7 @@
             // 
             // txtPrezime
             // 
+            this.txtPrezime.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtPrezime.Location = new System.Drawing.Point(126, 152);
             this.txtPrezime.Name = "txtPrezime";
             this.txtPrezime.Size = new System.Drawing.Size(197, 20);
@@ -146,6 +156,7 @@
             // 
             // txtIme
             // 
+            this.txtIme.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtIme.Location = new System.Drawing.Point(126, 108);
             this.txtIme.Name = "txtIme";
             this.txtIme.Size = new System.Drawing.Size(197, 20);
@@ -153,6 +164,7 @@
             // 
             // label5
             // 
+            this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(30, 245);
             this.label5.Name = "label5";
@@ -162,6 +174,7 @@
             // 
             // label4
             // 
+            this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(30, 200);
             this.label4.Name = "label4";
@@ -171,6 +184,7 @@
             // 
             // label3
             // 
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(30, 155);
             this.label3.Name = "label3";
@@ -180,6 +194,7 @@
             // 
             // label2
             // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(30, 111);
             this.label2.Name = "label2";

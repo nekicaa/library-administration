@@ -48,6 +48,7 @@
             // 
             // btnPretrazi
             // 
+            this.btnPretrazi.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnPretrazi.Location = new System.Drawing.Point(238, 73);
             this.btnPretrazi.Name = "btnPretrazi";
             this.btnPretrazi.Size = new System.Drawing.Size(97, 23);
@@ -58,6 +59,7 @@
             // 
             // txtFilter
             // 
+            this.txtFilter.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtFilter.Location = new System.Drawing.Point(50, 75);
             this.txtFilter.Name = "txtFilter";
             this.txtFilter.Size = new System.Drawing.Size(169, 20);
@@ -66,6 +68,7 @@
             // dgvIznajmljivanja
             // 
             this.dgvIznajmljivanja.AllowUserToAddRows = false;
+            this.dgvIznajmljivanja.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dgvIznajmljivanja.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvIznajmljivanja.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvIznajmljivanja.Location = new System.Drawing.Point(50, 136);
@@ -88,6 +91,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.txtClan);
             this.groupBox1.Controls.Add(this.txtRokRazduzivanja);
@@ -165,6 +169,7 @@
             // 
             // btnOdaberi
             // 
+            this.btnOdaberi.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnOdaberi.Location = new System.Drawing.Point(238, 371);
             this.btnOdaberi.Name = "btnOdaberi";
             this.btnOdaberi.Size = new System.Drawing.Size(97, 23);

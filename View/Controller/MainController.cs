@@ -18,7 +18,12 @@ namespace View.Controller
     {
         internal void OpenUCAddBook(FrmMain frmMain)
         {
-            frmMain.SetPanel(new UCAddKnjigaI());
+            frmMain.SetPanel(new UCAddBook());
+        }
+
+        internal void OpenUCAddIzdanje(FrmMain frmMain)
+        {
+            frmMain.SetPanel(new UCAddIzdanje());
         }
 
         internal void OpenUCSearchBook(FrmMain frmMain)
@@ -113,13 +118,6 @@ namespace View.Controller
             dgvStavke.DataSource = stavkeBinding;
         }
 
-        private BindingList<Izdanje> izdanjeBinding = new BindingList<Izdanje>();
-
-        internal void InitDgvIzdanja(DataGridView dgvIzdanja)
-        {
-            dgvIzdanja.DataSource = izdanjeBinding;
-        }
-
         internal void LoadDgvKnjiga(DataGridView dgvKnjige)
         {
             dgvKnjige.DataSource = new BindingList<Knjiga>((List<Knjiga>)Communication.Communication.Instance.GetKnjiga());
@@ -138,7 +136,7 @@ namespace View.Controller
         internal void GetKnjigaWithCondition(TextBox txtFilter, DataGridView dgvKnjige)
         {
             Knjiga k = new Knjiga();
-            k.Uslov = $"k.Naziv like '{txtFilter.Text}%'";
+            k.Uslov = $"k.Naziv like '{txtFilter.Text}%' or k.Zanr like '{txtFilter.Text}%'";
             List<Knjiga> listKnjiga = Communication.Communication.Instance.GetKnjigaWithCondition(k);
 
             if(listKnjiga.Count == 0)
@@ -188,7 +186,7 @@ namespace View.Controller
             }
         }
 
-        internal void GetOneKnjiga(DataGridView dgvKnjige, TextBox txtNaziv, TextBox txtISBN, TextBox txtZanr, TextBox txtAutor, TextBox txtGodStampe, TextBox txtIzdavac)
+        internal void GetOneKnjiga(DataGridView dgvKnjige, TextBox txtNaziv, TextBox txtISBN, TextBox txtZanr, Label lblNaslov)
         {
             if(dgvKnjige.SelectedRows.Count == 0)
             {
@@ -197,11 +195,8 @@ namespace View.Controller
             }
 
             Knjiga k = new Knjiga();
-            k.Uslov = $"Id='{((Knjiga)dgvKnjige.SelectedRows[0].DataBoundItem).Id}'";
+            k.Uslov = $"Id={((Knjiga)dgvKnjige.SelectedRows[0].DataBoundItem).Id}";
             k = Communication.Communication.Instance.GetOneKnjiga(k);
-            /*Izdanje i = new Izdanje();
-            i.Uslov = $"KnjigaId='{((Knjiga)dgvKnjige.SelectedRows[0].DataBoundItem).Id}'";
-            i = Communication.Communication.Instance.GetOneIzdanje(i);*/
 
             if(k == null)
             {
@@ -212,7 +207,7 @@ namespace View.Controller
                 txtNaziv.Text = k.Naziv;
                 txtISBN.Text = k.ISBN;
                 txtZanr.Text = k.Zanr;
-                //dodati izdanje
+                lblNaslov.Text += $" {k.Naziv}";
             }
 
         }
@@ -251,7 +246,7 @@ namespace View.Controller
             }
 
             Clan c = new Clan();
-            c.Uslov = $"Id='{((Clan)dgvClanovi.SelectedRows[0].DataBoundItem).Id}'";
+            c.Uslov = $"Id={((Clan)dgvClanovi.SelectedRows[0].DataBoundItem).Id}";
             c = Communication.Communication.Instance.GetOneClan(c);
 
             if (c == null)
@@ -265,31 +260,6 @@ namespace View.Controller
                 txtPrezime.Text = c.Prezime;
                 txtDatRodjenja.Text = c.DatumRodjenja.ToString();
                 txtKontakt.Text = c.Kontakt;
-            }
-        }
-
-        internal void GetOneKnjigaDel(DataGridView dgvKnjige, TextBox txtNaziv, TextBox txtISBN, TextBox txtZanr)
-        {
-            if (dgvKnjige.SelectedRows.Count == 0)
-            {
-                MessageBox.Show("Nije izabrana ni jedna knjiga!");
-                return;
-            }
-
-            Knjiga k = new Knjiga();
-            k.Uslov = $"Id='{((Knjiga)dgvKnjige.SelectedRows[0].DataBoundItem).Id}'";
-            k = Communication.Communication.Instance.GetOneKnjiga(k);
-
-            if (k == null)
-            {
-                MessageBox.Show("Nije pronadjena trazena knjiga!");
-            }
-            else
-            {
-                MessageBox.Show("Trazena knjiga je pronadjena!");
-                txtNaziv.Text = k.Naziv;
-                txtISBN.Text = k.ISBN;
-                txtZanr.Text = k.Zanr;
             }
         }
 
@@ -341,60 +311,20 @@ namespace View.Controller
             }
         }
 
-        internal void AddIzdanje(ComboBox cbAutor, TextBox txtGodStampe, TextBox txtIzdavac, DataGridView dgvIzdanja)
+        internal void SaveKnjiga(TextBox txtNaziv, TextBox txtISBN, TextBox txtZanr)
         {
-            if(cbAutor.SelectedIndex == -1)
+            if(!UserControlHelpers.EmptyFieldValidation(txtNaziv) | !UserControlHelpers.EmptyFieldValidation(txtISBN) | !UserControlHelpers.EmptyFieldValidation(txtZanr))
             {
-                MessageBox.Show("Niste odabrali autora!");
+                MessageBox.Show("Nisu popunjena sva polja!");
                 return;
             }
 
-            if(!Helpers.UserControlHelpers.EmptyFieldValidation(txtGodStampe) | !Helpers.UserControlHelpers.EmptyFieldValidation(txtIzdavac))
+            if (!UserControlHelpers.AllNumberValidation(txtISBN))
             {
-                MessageBox.Show("Niste popunili detalje o izdanju!");
+                MessageBox.Show("ISBN je u losem formatu!");
                 return;
             }
 
-            //proveri validaciju
-            if (izdanjeBinding.Any(i => (i.Autor == (Autor)cbAutor.SelectedItem) && (i.GodinaStampe == txtGodStampe.Text) && (i.Izdavac == txtIzdavac.Text)))
-            {
-                MessageBox.Show("Ovo izdanje je vec uneto!");
-                return;
-            } 
-
-            Izdanje izdanje = new Izdanje
-            {
-                Knjiga = new Knjiga(),
-                Autor = (Autor)cbAutor.SelectedItem,
-                RedniBroj = izdanjeBinding.Count + 1,
-                GodinaStampe = txtGodStampe.Text,
-                Izdavac = txtIzdavac.Text
-            };
-            izdanjeBinding.Add(izdanje);
-            MessageBox.Show("Uspesno ste dodali izdanje!");
-            dgvIzdanja.Refresh();
-            txtGodStampe.Text = "";
-            txtIzdavac.Text = "";
-            LoadComboBoxAutor(cbAutor);
-        }
-
-        internal void RemoveIzdanje(DataGridView dgvIzdanja)
-        {
-            foreach(DataGridViewRow row in dgvIzdanja.SelectedRows)
-            {
-                Izdanje izdanje = (Izdanje)row.DataBoundItem;
-                izdanjeBinding.Remove(izdanje);
-            }
-            int i = 1;
-            foreach(Izdanje izdanje in izdanjeBinding)
-            {
-                izdanje.RedniBroj = i;
-                i++;
-            }
-        }
-
-        internal void SaveKnjiga(TextBox txtNaziv, TextBox txtISBN, TextBox txtZanr, DataGridView dgvIzdanja)
-        {
             try
             {
                 Knjiga k = new Knjiga
@@ -403,28 +333,75 @@ namespace View.Controller
                     ISBN = txtISBN.Text,
                     Zanr = txtZanr.Text
                 };
-                k.Izdanje = izdanjeBinding.ToList();
-                MessageBox.Show("Knjiga je uspesno sacuvana!");
-                izdanjeBinding.Clear();
-                dgvIzdanja.Refresh();
+                Communication.Communication.Instance.SaveKnjiga(k);
+                MessageBox.Show("Knjiga uspesno sacuvana!");
+                // kako prebaciti na ucIzdanje?
+                txtNaziv.Text = "";
+                txtISBN.Text = "";
+                txtZanr.Text = "";
             }
             catch (SystemOperationException ex)
             {
-                MessageBox.Show("Iznajmljivanje nije sacuvano.\n" + ex.Message);
+                MessageBox.Show(ex.Message);
             }
-            catch (ServerException ex)
+        }
+
+        internal void SaveIzdanje(ComboBox cbKnjige, ComboBox cbAutori, TextBox txtGodStampe, TextBox txtIzdavac)
+        {
+            if (cbKnjige.SelectedIndex == -1)
             {
-                MessageBox.Show("Iznajmljivanje nije sacuvano.\n" + ex.Message);
+                MessageBox.Show("Nije odabrana knjiga!");
+                return;
+            }
+
+            if (cbAutori.SelectedIndex == -1)
+            {
+                MessageBox.Show("Nije odabran autor!");
+                return;
+            }
+
+            if (!UserControlHelpers.EmptyFieldValidation(txtGodStampe) | !UserControlHelpers.EmptyFieldValidation(txtIzdavac))
+            {
+                MessageBox.Show("Nisu popunjena sva polja!");
+                return;
+            }
+
+            if (!UserControlHelpers.AllNumberValidation(txtGodStampe))
+            {
+                MessageBox.Show("Godina stampe je u losem formatu!");
+                return;
+            }
+
+            try
+            {
+                Izdanje iz = new Izdanje
+                {
+                    Knjiga = (Knjiga)cbKnjige.SelectedItem,
+                    Autor = (Autor)cbAutori.SelectedItem,
+                    GodinaStampe = txtGodStampe.Text,
+                    Izdavac = txtIzdavac.Text
+                };
+                Communication.Communication.Instance.SaveIzdanje(iz);
+                MessageBox.Show("Izdanje uspesno sacuvano!");
+                LoadComboBoxAutor(cbAutori);
+                LoadComboBoxKnjiga(cbKnjige);
+                txtGodStampe.Text = "";
+                txtIzdavac.Text = "";
+            }
+            catch (SystemOperationException ex)
+            {
+                MessageBox.Show(ex.Message);
             }
         }
 
-        internal void SaveKnjiga(TextBox txtNaziv, TextBox txtISBN, TextBox txtZanr, ComboBox cbAutor, TextBox txtGodStampe, TextBox txtIzdavac)
+        internal void SaveIznajmljivanje(ComboBox cbClan, DataGridView dgvStavke, TextBox txtDatIznajmljivanja, TextBox txtRokRazduzivanja)
         {
-            //throw new NotImplementedException();
-        }
+            if (cbClan.SelectedIndex == -1)
+            {
+                MessageBox.Show("Morate odabrati clana!");
+                return;
+            }
 
-        internal void SaveIznajmljivanje(ComboBox cbClan, DataGridView dgvStavke)
-        {
             try
             {
                 Iznajmljivanje iz = new Iznajmljivanje
@@ -434,6 +411,7 @@ namespace View.Controller
                     Clan = (Clan)cbClan.SelectedItem
                 };
                 iz.Stavke = stavkeBinding.ToList();
+                Communication.Communication.Instance.SaveIznajmljivanje(iz);
                 MessageBox.Show("Iznajmljivanje sacuvano!");
                 stavkeBinding.Clear();
                 LoadComboBoxClan(cbClan);

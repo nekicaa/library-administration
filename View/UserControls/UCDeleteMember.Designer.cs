@@ -49,6 +49,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.btnObrisi);
             this.groupBox1.Controls.Add(this.txtKontakt);
@@ -155,6 +156,7 @@
             // 
             // btnOdaberi
             // 
+            this.btnOdaberi.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnOdaberi.Location = new System.Drawing.Point(265, 338);
             this.btnOdaberi.Name = "btnOdaberi";
             this.btnOdaberi.Size = new System.Drawing.Size(101, 23);
@@ -166,6 +168,7 @@
             // dgvClanovi
             // 
             this.dgvClanovi.AllowUserToAddRows = false;
+            this.dgvClanovi.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dgvClanovi.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvClanovi.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvClanovi.Location = new System.Drawing.Point(42, 116);
@@ -176,6 +179,7 @@
             // 
             // btnPretrazi
             // 
+            this.btnPretrazi.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnPretrazi.Location = new System.Drawing.Point(265, 54);
             this.btnPretrazi.Name = "btnPretrazi";
             this.btnPretrazi.Size = new System.Drawing.Size(101, 23);
@@ -186,6 +190,7 @@
             // 
             // txtFilter
             // 
+            this.txtFilter.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtFilter.Location = new System.Drawing.Point(42, 55);
             this.txtFilter.Name = "txtFilter";
             this.txtFilter.Size = new System.Drawing.Size(203, 20);

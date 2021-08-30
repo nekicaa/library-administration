@@ -50,6 +50,8 @@ namespace View.Communication
             socket = null;
         }
 
+        //implementiraju se sistemske operacije
+
         internal Administrator Login(string korisnickoIme, string sifra)
         {
             Request request = new Request()
@@ -145,6 +147,13 @@ namespace View.Communication
             client.GetResponseResult();
         }
 
+        internal void SaveIzdanje(Izdanje izdanje)
+        {
+            Request request = new Request() { Operation = Operation.SaveIzdanje, RequestObject = izdanje };
+            client.SendRequest(request);
+            client.GetResponseResult();
+        }
+
         internal void SaveIznajmljivanje(Iznajmljivanje iznajmljivanje)
         {
             Request request = new Request() { Operation = Operation.SaveIznajmljivanje, RequestObject = iznajmljivanje };
@@ -158,14 +167,7 @@ namespace View.Communication
             client.SendRequest(request);
             return (List<Iznajmljivanje>)client.GetResponseResult();
         }
-
-        /*internal List<StavkaIznajmljivanja> GetStavkeIznajmljivanja()
-        {
-            Request request = new Request() { Operation = Operation.GetStavkeIznajmljivanja };
-            client.SendRequest(request);
-            return (List<StavkaIznajmljivanja>)client.GetResponseResult();
-        }*/
-
+        
         internal List<Iznajmljivanje> GetIznajmljivanjeWithCondition(Iznajmljivanje iznajmljivanje)
         {
             Request request = new Request() { Operation = Operation.GetIznajmljivanjeWithCondition, RequestObject = iznajmljivanje };
@@ -187,6 +189,5 @@ namespace View.Communication
             client.GetResponseResult();
         }
 
-        //implementiraju se sistemske operacije
     }
 }

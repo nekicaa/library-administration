@@ -8,21 +8,28 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using View.Controller;
+using Domain;
 
 namespace View.UserControls
 {
-    public partial class UCAddBook : UserControl
+    public partial class UCAddIzdanje : UserControl
     {
         MainController mainController = new MainController();
 
-        public UCAddBook()
+        public UCAddIzdanje()
         {
             InitializeComponent();
         }
 
+        private void UCAddIzdanje_Load(object sender, EventArgs e)
+        {
+            mainController.LoadComboBoxAutor(cbAutori);
+            mainController.LoadComboBoxKnjiga(cbKnjige);
+        }
+
         private void btnSacuvaj_Click(object sender, EventArgs e)
         {
-            mainController.SaveKnjiga(txtNaziv, txtISBN, txtZanr);
+            mainController.SaveIzdanje(cbKnjige, cbAutori, txtGodStampe, txtIzdavac);
         }
     }
 }

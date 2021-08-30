@@ -33,7 +33,7 @@ namespace View.UserControls
 
         private void btnOdaberi_Click(object sender, EventArgs e)
         {
-            mainController.GetOneKnjigaDel(dgvKnjige, txtNaziv, txtISBN, txtZanr);
+            mainController.GetOneKnjiga(dgvKnjige, txtNaziv, txtISBN, txtZanr, lblNaslov);
             btnObrisi.Enabled = true;
         }
 

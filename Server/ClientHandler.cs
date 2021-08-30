@@ -111,15 +111,15 @@ namespace Server
                 case Operation.DeleteKnjiga:
                     Controller.Controller.Instance.DeleteKnjiga((Knjiga)request.RequestObject);
                     break;
+                case Operation.SaveIzdanje:
+                    Controller.Controller.Instance.SaveIzdanje((Izdanje)request.RequestObject);
+                    break;
                 case Operation.SaveIznajmljivanje:
                     Controller.Controller.Instance.SaveIznajmljivanje((Iznajmljivanje)request.RequestObject);
                     break;
                 case Operation.GetIznajmljivanje:
                     response.Result = Controller.Controller.Instance.GetIznajmljivanje();
                     break;
-                /*case Operation.GetStavkeIznajmljivanja:
-                    response.Result = Controller.Controller.Instance.GetStavkeIznajmljivanja();
-                    break;*/
                 case Operation.GetIznajmljivanjeWithCondition:
                     response.Result = Controller.Controller.Instance.GetIznajmljivanjeWithCondition((Iznajmljivanje)request.RequestObject);
                     break;

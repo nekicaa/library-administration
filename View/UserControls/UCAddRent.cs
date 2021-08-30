@@ -23,7 +23,7 @@ namespace View.UserControls
 
         private void btnSacuvaj_Click(object sender, EventArgs e)
         {
-            mainController.SaveIznajmljivanje(cbClan, dgvStavke);
+            mainController.SaveIznajmljivanje(cbClan, dgvStavke, txtDatIznajmljivanja, txtRokRazduzivanja);
         }
 
         private void btnDodajStavku_Click(object sender, EventArgs e)

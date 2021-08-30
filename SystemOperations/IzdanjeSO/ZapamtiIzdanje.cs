@@ -5,9 +5,9 @@ using System.Text;
 using System.Threading.Tasks;
 using Domain;
 
-namespace SystemOperations.KnjigaSO
+namespace SystemOperations.IzdanjeSO
 {
-    public class ZapamtiKnjigu : SystemOperationBase
+    public class ZapamtiIzdanje : SystemOperationBase
     {
         protected override void ExecuteOperation(IEntity entity)
         {

@@ -32,7 +32,7 @@ namespace View.UserControls
 
         private void btnOdaberi_Click(object sender, EventArgs e)
         {
-            mainController.GetOneKnjiga(dgvKnjige, txtNaziv, txtISBN, txtZanr, txtAutor, txtGodStampe, txtIzdavac);
+            mainController.GetOneKnjiga(dgvKnjige, txtNaziv, txtISBN, txtZanr, lblNaslov);
         }
     }
 }

@@ -50,6 +50,7 @@
             // 
             // label1
             // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(289, 39);
@@ -60,6 +61,7 @@
             // 
             // label2
             // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(53, 95);
             this.label2.Name = "label2";
@@ -69,6 +71,7 @@
             // 
             // label3
             // 
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(53, 132);
             this.label3.Name = "label3";
@@ -78,6 +81,7 @@
             // 
             // label4
             // 
+            this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(53, 170);
             this.label4.Name = "label4";
@@ -87,6 +91,7 @@
             // 
             // txtDatIznajmljivanja
             // 
+            this.txtDatIznajmljivanja.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtDatIznajmljivanja.Location = new System.Drawing.Point(204, 92);
             this.txtDatIznajmljivanja.Name = "txtDatIznajmljivanja";
             this.txtDatIznajmljivanja.ReadOnly = true;
@@ -95,6 +100,7 @@
             // 
             // txtRokRazduzivanja
             // 
+            this.txtRokRazduzivanja.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtRokRazduzivanja.Location = new System.Drawing.Point(204, 129);
             this.txtRokRazduzivanja.Name = "txtRokRazduzivanja";
             this.txtRokRazduzivanja.ReadOnly = true;
@@ -103,6 +109,7 @@
             // 
             // cbClan
             // 
+            this.cbClan.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.cbClan.FormattingEnabled = true;
             this.cbClan.Location = new System.Drawing.Point(204, 167);
             this.cbClan.Name = "cbClan";
@@ -121,6 +128,7 @@
             // 
             // btnObrisiStavke
             // 
+            this.btnObrisiStavke.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnObrisiStavke.Location = new System.Drawing.Point(529, 267);
             this.btnObrisiStavke.Name = "btnObrisiStavke";
             this.btnObrisiStavke.Size = new System.Drawing.Size(107, 23);
@@ -132,6 +140,7 @@
             // dgvStavke
             // 
             this.dgvStavke.AllowUserToAddRows = false;
+            this.dgvStavke.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dgvStavke.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvStavke.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvStavke.Location = new System.Drawing.Point(56, 248);
@@ -142,6 +151,7 @@
             // 
             // btnSacuvaj
             // 
+            this.btnSacuvaj.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnSacuvaj.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSacuvaj.Location = new System.Drawing.Point(529, 332);
             this.btnSacuvaj.Name = "btnSacuvaj";
@@ -153,6 +163,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.groupBox1.Controls.Add(this.cbKnjiga);
             this.groupBox1.Controls.Add(this.txtKolicina);
             this.groupBox1.Controls.Add(this.label5);

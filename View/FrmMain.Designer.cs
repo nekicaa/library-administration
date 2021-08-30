@@ -43,6 +43,7 @@
             this.napraviNovoIznajmljivanjeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pretragaIznajmljenihKnjigaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.razduzivanjeKnjigaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.dodajIzdanjeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pnlMain.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -50,7 +51,6 @@
             // pnlMain
             // 
             this.pnlMain.Controls.Add(this.lblWelcome);
-            this.pnlMain.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlMain.Location = new System.Drawing.Point(0, 24);
             this.pnlMain.Name = "pnlMain";
             this.pnlMain.Size = new System.Drawing.Size(800, 426);
@@ -68,13 +68,14 @@
             // 
             // menuStrip1
             // 
+            this.menuStrip1.Dock = System.Windows.Forms.DockStyle.None;
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.knjigeToolStripMenuItem,
             this.clanoviToolStripMenuItem,
             this.iznajmljivanjaToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(800, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(330, 24);
             this.menuStrip1.TabIndex = 2;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -82,6 +83,7 @@
             // 
             this.knjigeToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.dodajNovuKnjiguToolStripMenuItem,
+            this.dodajIzdanjeToolStripMenuItem,
             this.pretraziKnjigeToolStripMenuItem,
             this.obrisiKnjiguToolStripMenuItem});
             this.knjigeToolStripMenuItem.Name = "knjigeToolStripMenuItem";
@@ -171,6 +173,13 @@
             this.razduzivanjeKnjigaToolStripMenuItem.Text = "Razduzivanje knjiga";
             this.razduzivanjeKnjigaToolStripMenuItem.Click += new System.EventHandler(this.razduzivanjeKnjigaToolStripMenuItem_Click);
             // 
+            // dodajIzdanjeToolStripMenuItem
+            // 
+            this.dodajIzdanjeToolStripMenuItem.Name = "dodajIzdanjeToolStripMenuItem";
+            this.dodajIzdanjeToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.dodajIzdanjeToolStripMenuItem.Text = "Dodaj izdanje";
+            this.dodajIzdanjeToolStripMenuItem.Click += new System.EventHandler(this.dodajIzdanjeToolStripMenuItem_Click);
+            // 
             // FrmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -179,6 +188,7 @@
             this.Controls.Add(this.pnlMain);
             this.Controls.Add(this.menuStrip1);
             this.Name = "FrmMain";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Pocetna strana";
             this.pnlMain.ResumeLayout(false);
             this.pnlMain.PerformLayout();
@@ -206,5 +216,6 @@
         private System.Windows.Forms.ToolStripMenuItem napraviNovoIznajmljivanjeToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem pretragaIznajmljenihKnjigaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem razduzivanjeKnjigaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem dodajIzdanjeToolStripMenuItem;
     }
 }

@@ -20,7 +20,7 @@ namespace Domain
         [Browsable(false)]
         public string TableName => "StavkaIznajmljivanja";
         [Browsable(false)]
-        public string InsertValues => $"{Iznajmljivanje.Id},{Kolicina},{Knjiga.Id}";
+        public string InsertValues => $"{Iznajmljivanje.Id},{RedniBroj},{Kolicina},{Knjiga.Id}";
         [Browsable(false)]
         public string IdName => "RedniBroj";
         [Browsable(false)]

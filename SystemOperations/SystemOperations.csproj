@@ -54,10 +54,10 @@
     <Compile Include="ClanSO\UcitajOdabranogClana.cs" />
     <Compile Include="ClanSO\VratiListuClanova.cs" />
     <Compile Include="ClanSO\ZapamtiClana.cs" />
+    <Compile Include="IzdanjeSO\ZapamtiIzdanje.cs" />
     <Compile Include="IznajmljivanjeSO\ObrisiIznajmljivanje.cs" />
     <Compile Include="IznajmljivanjeSO\PretraziIznajmljivanje.cs" />
     <Compile Include="IznajmljivanjeSO\UcitajOdabranoIznajmljivanje.cs" />
-    <Compile Include="IznajmljivanjeSO\UcitajStavkeIznajmljivanja.cs" />
     <Compile Include="IznajmljivanjeSO\VratiListuIznajmljivanja.cs" />
     <Compile Include="IznajmljivanjeSO\ZapamtiIznajmljivanje.cs" />
     <Compile Include="KnjigaSO\ObrisiOdabranuKnjigu.cs" />

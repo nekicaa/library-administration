@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using SystemOperations.AdministratorSO;
 using SystemOperations.AutorSO;
 using SystemOperations.ClanSO;
+using SystemOperations.IzdanjeSO;
 using SystemOperations.IznajmljivanjeSO;
 using SystemOperations.KnjigaSO;
 
@@ -136,6 +137,12 @@ namespace Controller
             so.ExecuteTemplate(knjiga);
         }
 
+        public void SaveIzdanje(Izdanje izdanje)
+        {
+            ZapamtiIzdanje so = new ZapamtiIzdanje();
+            so.ExecuteTemplate(izdanje);
+        }
+
         public void SaveIznajmljivanje(Iznajmljivanje izn)
         {
             ZapamtiIznajmljivanje so = new ZapamtiIznajmljivanje();
@@ -148,14 +155,7 @@ namespace Controller
             so.ExecuteTemplate(new Iznajmljivanje());
             return so.Result;
         }
-
-        /*public List<StavkaIznajmljivanja> GetStavkeIznajmljivanja()
-        {
-            UcitajStavkeIznajmljivanja so = new UcitajStavkeIznajmljivanja();
-            so.ExecuteTemplate(new StavkaIznajmljivanja());
-            return so.Result;
-        }*/
-
+        
         public List<Iznajmljivanje> GetIznajmljivanjeWithCondition(Iznajmljivanje izn)
         {
             PretraziIznajmljivanje so = new PretraziIznajmljivanje();

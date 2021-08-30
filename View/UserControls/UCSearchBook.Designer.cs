@@ -33,16 +33,9 @@
             this.dgvKnjige = new System.Windows.Forms.DataGridView();
             this.btnOdaberi = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.txtAutor = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.txtGodStampe = new System.Windows.Forms.TextBox();
             this.txtZanr = new System.Windows.Forms.TextBox();
-            this.txtIzdavac = new System.Windows.Forms.TextBox();
             this.txtISBN = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
             this.txtNaziv = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -53,6 +46,7 @@
             // 
             // txtFilter
             // 
+            this.txtFilter.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtFilter.Location = new System.Drawing.Point(37, 70);
             this.txtFilter.Name = "txtFilter";
             this.txtFilter.Size = new System.Drawing.Size(169, 20);
@@ -60,6 +54,7 @@
             // 
             // btnPretrazi
             // 
+            this.btnPretrazi.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnPretrazi.Location = new System.Drawing.Point(221, 68);
             this.btnPretrazi.Name = "btnPretrazi";
             this.btnPretrazi.Size = new System.Drawing.Size(110, 23);
@@ -71,6 +66,7 @@
             // dgvKnjige
             // 
             this.dgvKnjige.AllowUserToAddRows = false;
+            this.dgvKnjige.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dgvKnjige.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvKnjige.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvKnjige.Location = new System.Drawing.Point(37, 120);
@@ -81,6 +77,7 @@
             // 
             // btnOdaberi
             // 
+            this.btnOdaberi.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnOdaberi.Location = new System.Drawing.Point(221, 349);
             this.btnOdaberi.Name = "btnOdaberi";
             this.btnOdaberi.Size = new System.Drawing.Size(110, 23);
@@ -91,16 +88,10 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.txtAutor);
-            this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.txtGodStampe);
+            this.groupBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.groupBox1.Controls.Add(this.txtZanr);
-            this.groupBox1.Controls.Add(this.txtIzdavac);
             this.groupBox1.Controls.Add(this.txtISBN);
-            this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.txtNaziv);
-            this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
@@ -111,94 +102,34 @@
             this.groupBox1.TabIndex = 4;
             this.groupBox1.TabStop = false;
             // 
-            // txtAutor
-            // 
-            this.txtAutor.Location = new System.Drawing.Point(149, 268);
-            this.txtAutor.Name = "txtAutor";
-            this.txtAutor.ReadOnly = true;
-            this.txtAutor.Size = new System.Drawing.Size(191, 20);
-            this.txtAutor.TabIndex = 16;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(174, 225);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(65, 13);
-            this.label1.TabIndex = 14;
-            this.label1.Text = "--- Izdanje ---";
-            // 
-            // txtGodStampe
-            // 
-            this.txtGodStampe.Location = new System.Drawing.Point(149, 306);
-            this.txtGodStampe.Name = "txtGodStampe";
-            this.txtGodStampe.ReadOnly = true;
-            this.txtGodStampe.Size = new System.Drawing.Size(191, 20);
-            this.txtGodStampe.TabIndex = 14;
-            // 
             // txtZanr
             // 
-            this.txtZanr.Location = new System.Drawing.Point(149, 179);
+            this.txtZanr.Location = new System.Drawing.Point(149, 233);
             this.txtZanr.Name = "txtZanr";
             this.txtZanr.ReadOnly = true;
             this.txtZanr.Size = new System.Drawing.Size(191, 20);
             this.txtZanr.TabIndex = 13;
             // 
-            // txtIzdavac
-            // 
-            this.txtIzdavac.Location = new System.Drawing.Point(149, 346);
-            this.txtIzdavac.Name = "txtIzdavac";
-            this.txtIzdavac.ReadOnly = true;
-            this.txtIzdavac.Size = new System.Drawing.Size(191, 20);
-            this.txtIzdavac.TabIndex = 15;
-            // 
             // txtISBN
             // 
-            this.txtISBN.Location = new System.Drawing.Point(149, 137);
+            this.txtISBN.Location = new System.Drawing.Point(149, 191);
             this.txtISBN.Name = "txtISBN";
             this.txtISBN.ReadOnly = true;
             this.txtISBN.Size = new System.Drawing.Size(191, 20);
             this.txtISBN.TabIndex = 12;
             // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(58, 271);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(32, 13);
-            this.label5.TabIndex = 11;
-            this.label5.Text = "Autor";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(58, 309);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(78, 13);
-            this.label6.TabIndex = 12;
-            this.label6.Text = "Godina stampe";
-            // 
             // txtNaziv
             // 
-            this.txtNaziv.Location = new System.Drawing.Point(149, 95);
+            this.txtNaziv.Location = new System.Drawing.Point(149, 149);
             this.txtNaziv.Name = "txtNaziv";
             this.txtNaziv.ReadOnly = true;
             this.txtNaziv.Size = new System.Drawing.Size(191, 20);
             this.txtNaziv.TabIndex = 11;
             // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(58, 349);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(45, 13);
-            this.label7.TabIndex = 13;
-            this.label7.Text = "Izdavac";
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(59, 182);
+            this.label4.Location = new System.Drawing.Point(59, 236);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(29, 13);
             this.label4.TabIndex = 10;
@@ -207,7 +138,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(59, 140);
+            this.label3.Location = new System.Drawing.Point(59, 194);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(32, 13);
             this.label3.TabIndex = 9;
@@ -216,7 +147,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(59, 103);
+            this.label2.Location = new System.Drawing.Point(59, 157);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(34, 13);
             this.label2.TabIndex = 8;
@@ -226,7 +157,7 @@
             // 
             this.lblNaslov.AutoSize = true;
             this.lblNaslov.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNaslov.Location = new System.Drawing.Point(123, 45);
+            this.lblNaslov.Location = new System.Drawing.Point(123, 99);
             this.lblNaslov.Name = "lblNaslov";
             this.lblNaslov.Size = new System.Drawing.Size(55, 16);
             this.lblNaslov.TabIndex = 0;
@@ -261,18 +192,11 @@
         private System.Windows.Forms.Button btnOdaberi;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label lblNaslov;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtZanr;
         private System.Windows.Forms.TextBox txtISBN;
         private System.Windows.Forms.TextBox txtNaziv;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txtGodStampe;
-        private System.Windows.Forms.TextBox txtIzdavac;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox txtAutor;
     }
 }
