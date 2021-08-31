@@ -32,7 +32,7 @@ namespace Domain
         [Browsable(false)]
         public object SelectValues => "*";
         [Browsable(false)]
-        public string WhereCondition => "";
+        public string WhereCondition => $"Id={Id}";
         [Browsable(false)]
         public string GetUpdateValues => "";
 

@@ -14,6 +14,9 @@ namespace SystemOperations.IznajmljivanjeSO
         protected override void ExecuteOperation(IEntity entity)
         {
             Result = repository.GetAllWithCondition(entity).Cast<Iznajmljivanje>().ToList()[0];
+            StavkaIznajmljivanja si = new StavkaIznajmljivanja();
+            si.Uslov = $"si.IznajmljivanjeId={Result.Id}";
+            Result.Stavke = repository.GetAllWithCondition(si).Cast<StavkaIznajmljivanja>().ToList();
         }
     }
 }

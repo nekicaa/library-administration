@@ -22,7 +22,7 @@ namespace SystemOperations.IznajmljivanjeSO
                     repository.Delete(si);
                 }
             }
-            repository.Delete(entity);
+            repository.Delete(iz);
         }
     }
 }

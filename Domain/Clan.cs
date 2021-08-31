@@ -33,9 +33,9 @@ namespace Domain
         [Browsable(false)]
         public object SelectValues => "*";
         [Browsable(false)]
-        public string WhereCondition => "";
+        public string WhereCondition => $"Id={Id}";
         [Browsable(false)]
-        public string GetUpdateValues => "";
+        public string GetUpdateValues => $"Ime='{Ime}', Prezime='{Prezime}', DatumRodjenja='{DatumRodjenja}', Kontakt='{Kontakt}'";
 
         public string Uslov;
 

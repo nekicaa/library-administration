@@ -32,7 +32,7 @@ namespace Domain
         [Browsable(false)]
         public object SelectValues => "si.IznajmljivanjeId, si.RedniBroj, si.Kolicina, k.Id, k.Naziv, k.ISBN, k.Zanr";
         [Browsable(false)]
-        public string WhereCondition => "";
+        public string WhereCondition => $"si.IznajmljivanjeId={Iznajmljivanje.Id} AND si.RedniBroj={RedniBroj}";
         [Browsable(false)]
         public string GetUpdateValues => "";
 

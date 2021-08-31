@@ -153,9 +153,7 @@ namespace View.Controller
         internal void GetIznajmljivanjeWithCondition(TextBox txtFilter, DataGridView dgvIznajmljivanja)
         {
             Iznajmljivanje iz = new Iznajmljivanje();
-            //tryparse!!!
-            DateTime.TryParse(txtFilter.Text, out DateTime prom);
-            iz.Uslov = $"iz.DatumIznajmljivanja like '{prom}%'";
+            iz.Uslov = $"c.Ime like '{txtFilter.Text}%' or c.Prezime like '{txtFilter.Text}%'";
             List<Iznajmljivanje> listIznajmljivanje = Communication.Communication.Instance.GetIznajmljivanjeWithCondition(iz);
 
             if(listIznajmljivanje.Count == 0)
@@ -221,7 +219,7 @@ namespace View.Controller
             }
 
             Iznajmljivanje iz = new Iznajmljivanje();
-            iz.Uslov = $"Id={((Iznajmljivanje)dgvIznajmljivanja.SelectedRows[0].DataBoundItem).Id}";
+            iz.Uslov = $"iz.Id={((Iznajmljivanje)dgvIznajmljivanja.SelectedRows[0].DataBoundItem).Id}";
             iz = Communication.Communication.Instance.GetOneIznajmljivanje(iz);
 
             if(iz == null)
@@ -451,7 +449,7 @@ namespace View.Controller
                 {
                     Ime = txtIme.Text,
                     Prezime = txtPrezime.Text,
-                    DatumRodjenja = DateTime.ParseExact(txtDatRodjenja.Text, "dd.MM.yyyy.", CultureInfo.InvariantCulture),
+                    DatumRodjenja = DateTime.Parse(txtDatRodjenja.Text),
                     Kontakt = txtKontakt.Text
                 };
                 Communication.Communication.Instance.SaveClan(c);
@@ -496,7 +494,7 @@ namespace View.Controller
                 {
                     Ime = txtIme.Text,
                     Prezime = txtPrezime.Text,
-                    DatumRodjenja = DateTime.ParseExact(txtDatRodjenja.Text, "dd.MM.yyyy.", CultureInfo.InvariantCulture),
+                    DatumRodjenja = DateTime.Parse(txtDatRodjenja.Text),
                     Kontakt = txtKontakt.Text
                 };
                 Communication.Communication.Instance.UpdateClan(c);
@@ -512,7 +510,7 @@ namespace View.Controller
             }
         }
 
-        internal void DeleteKnjiga(DataGridView dgvKnjige)
+        internal void DeleteKnjiga(DataGridView dgvKnjige, TextBox txtNaziv, TextBox txtISBN, TextBox txtZanr)
         {
             if(dgvKnjige.SelectedRows.Count == 0)
             {
@@ -524,6 +522,10 @@ namespace View.Controller
             {
                 Communication.Communication.Instance.DeleteKnjiga((Knjiga)dgvKnjige.SelectedRows[0].DataBoundItem);
                 MessageBox.Show("Uspesno obrisana knjiga!");
+                dgvKnjige.Refresh();
+                txtNaziv.Text = "";
+                txtISBN.Text = "";
+                txtZanr.Text = "";
             }
             catch (SystemOperationException ex)
             {
@@ -531,7 +533,7 @@ namespace View.Controller
             }
         }
 
-        internal void DeleteIznajmljivanje(DataGridView dgvIznajmljivanja)
+        internal void DeleteIznajmljivanje(DataGridView dgvIznajmljivanja, TextBox txtDatIznajmljivanja, TextBox txtRokRazduzivanja, TextBox txtClan, DataGridView dgvStavke)
         {
             if(dgvIznajmljivanja.SelectedRows.Count == 0)
             {
@@ -541,8 +543,14 @@ namespace View.Controller
 
             try
             {
-                Communication.Communication.Instance.DeleteIznajmljivanje((Iznajmljivanje)dgvIznajmljivanja.SelectedRows[0].DataBoundItem);
+                Iznajmljivanje iznajmljivanje = (Iznajmljivanje)dgvIznajmljivanja.SelectedRows[0].DataBoundItem;
+                Communication.Communication.Instance.DeleteIznajmljivanje(iznajmljivanje);
                 MessageBox.Show("Uspesno obrisano iznajmljivanje!");
+                dgvIznajmljivanja.Refresh();
+                dgvStavke.Refresh();
+                txtDatIznajmljivanja.Text = "";
+                txtRokRazduzivanja.Text = "";
+                txtClan.Text = "";
             }
             catch (SystemOperationException ex)
             {
@@ -550,7 +558,7 @@ namespace View.Controller
             }
         }
 
-        internal void DeleteClan(DataGridView dgvClanovi)
+        internal void DeleteClan(DataGridView dgvClanovi, TextBox txtIme, TextBox txtPrezime, TextBox txtDatRodjenja, TextBox txtKontakt)
         {
             if (dgvClanovi.SelectedRows.Count == 0)
             {
@@ -562,6 +570,11 @@ namespace View.Controller
             {
                 Communication.Communication.Instance.DeleteClan((Clan)dgvClanovi.SelectedRows[0].DataBoundItem);
                 MessageBox.Show("Clan je uspesno obrisan!");
+                dgvClanovi.Refresh();
+                txtIme.Text = "";
+                txtPrezime.Text = "";
+                txtDatRodjenja.Text = "";
+                txtKontakt.Text = "";
             }
             catch (SystemOperationException ex)
             {

@@ -43,7 +43,7 @@ namespace View.Helpers
 
         public static bool DateTimeValidation(TextBox txt)
         {
-            if (!DateTime.TryParseExact(txt.Text, "dd.MM.yyyy.", CultureInfo.InvariantCulture, DateTimeStyles.None, out _))
+            if (!DateTime.TryParse(txt.Text, out DateTime result))
             {
                 txt.BackColor = Color.LightCoral;
                 return false;

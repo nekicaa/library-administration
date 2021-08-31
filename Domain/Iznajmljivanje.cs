@@ -34,7 +34,7 @@ namespace Domain
         [Browsable(false)]
         public object SelectValues => "iz.Id, iz.DatumIznajmljivanja, iz.RokZaRazduzivanje, c.Id, c.Ime, c.Prezime, c.DatumRodjenja, c.Kontakt";
         [Browsable(false)]
-        public string WhereCondition => "";
+        public string WhereCondition => $"Id={Id}";
         [Browsable(false)]
         public string GetUpdateValues => "";
 

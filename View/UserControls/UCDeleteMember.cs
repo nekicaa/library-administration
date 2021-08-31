@@ -40,7 +40,7 @@ namespace View.UserControls
 
         private void btnObrisi_Click(object sender, EventArgs e)
         {
-            mainController.DeleteClan(dgvClanovi);
+            mainController.DeleteClan(dgvClanovi, txtIme, txtPrezime, txtDatRodjenja, txtKontakt);
         }
     }
 }

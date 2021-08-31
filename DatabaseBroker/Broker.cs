@@ -77,7 +77,6 @@ namespace DatabaseBroker
         }
         public void Delete(IEntity entity)
         {
-            List<IEntity> result;
             SqlCommand command = new SqlCommand("", connection, transaction);
             command.CommandText = $"delete from {entity.TableName} where {entity.WhereCondition}";
             if (command.ExecuteNonQuery() != 1)
@@ -87,7 +86,6 @@ namespace DatabaseBroker
         }
         public void Update(IEntity entity)
         {
-            List<IEntity> result;
             SqlCommand command = new SqlCommand("", connection, transaction);
             command.CommandText = $"update {entity.TableName} set {entity.GetUpdateValues} where {entity.WhereCondition}";
             if (command.ExecuteNonQuery() != 1)
