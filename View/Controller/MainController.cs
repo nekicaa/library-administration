@@ -490,19 +490,19 @@ namespace View.Controller
 
             try
             {
-                Clan c = new Clan
-                {
-                    Ime = txtIme.Text,
-                    Prezime = txtPrezime.Text,
-                    DatumRodjenja = DateTime.Parse(txtDatRodjenja.Text),
-                    Kontakt = txtKontakt.Text
-                };
-                Communication.Communication.Instance.UpdateClan(c);
+                Clan clan = (Clan)dgvClanovi.SelectedRows[0].DataBoundItem;
+                clan.Ime = txtIme.Text;
+                clan.Prezime = txtPrezime.Text;
+                clan.DatumRodjenja = DateTime.Parse(txtDatRodjenja.Text);
+                clan.Kontakt = txtKontakt.Text;
+
+                Communication.Communication.Instance.UpdateClan(clan);
                 MessageBox.Show("Clan uspesno izmenjen!");
                 txtIme.Text = "";
                 txtPrezime.Text = "";
                 txtDatRodjenja.Text = "";
                 txtKontakt.Text = "";
+                dgvClanovi.Refresh();
             }
             catch (SystemOperationException ex)
             {
