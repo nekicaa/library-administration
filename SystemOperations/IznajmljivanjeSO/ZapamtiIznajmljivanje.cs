@@ -13,7 +13,7 @@ namespace SystemOperations.IznajmljivanjeSO
         {
             Iznajmljivanje izn = (Iznajmljivanje)entity;
             repository.Save(entity);
-            int id = repository.GetNewId(new Iznajmljivanje())-1;
+            int id = repository.GetNewId(new Iznajmljivanje());
             foreach(StavkaIznajmljivanja si in izn.Stavke)
             {
                 si.Iznajmljivanje.Id = id;

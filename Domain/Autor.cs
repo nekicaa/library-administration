@@ -38,7 +38,7 @@ namespace Domain
         public string Uslov;
 
         [Browsable(false)]
-        public string GeneralCondition => $"'{Uslov}'";
+        public string GeneralCondition => $"{Uslov}";
         [Browsable(false)]
         public List<IEntity> GetEntities(SqlDataReader reader)
         {
