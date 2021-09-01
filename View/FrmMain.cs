@@ -85,5 +85,12 @@ namespace View
         {
             Environment.Exit(0);
         }
+
+        private void početnaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            pnlMain.Controls.Clear();
+            lblWelcome.Visible = true;
+            lblWelcome.Text += $"{admin.Ime} {admin.Prezime}";
+        }
     }
 }

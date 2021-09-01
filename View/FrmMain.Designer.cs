@@ -28,11 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMain));
             this.pnlMain = new System.Windows.Forms.Panel();
             this.lblWelcome = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.knjigeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dodajNovuKnjiguToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.dodajIzdanjeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pretraziKnjigeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.obrisiKnjiguToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.clanoviToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -43,14 +45,17 @@
             this.napraviNovoIznajmljivanjeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pretragaIznajmljenihKnjigaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.razduzivanjeKnjigaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.dodajIzdanjeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.početnaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pnlMain.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlMain
             // 
+            this.pnlMain.BackColor = System.Drawing.Color.Transparent;
+            this.pnlMain.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pnlMain.Controls.Add(this.lblWelcome);
+            this.pnlMain.Font = new System.Drawing.Font("Bahnschrift", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.pnlMain.Location = new System.Drawing.Point(0, 24);
             this.pnlMain.Name = "pnlMain";
             this.pnlMain.Size = new System.Drawing.Size(800, 426);
@@ -58,24 +63,29 @@
             // 
             // lblWelcome
             // 
+            this.lblWelcome.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblWelcome.AutoSize = true;
-            this.lblWelcome.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblWelcome.Location = new System.Drawing.Point(277, 164);
+            this.lblWelcome.BackColor = System.Drawing.Color.Transparent;
+            this.lblWelcome.Font = new System.Drawing.Font("Bahnschrift SemiBold", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblWelcome.Location = new System.Drawing.Point(70, 145);
             this.lblWelcome.Name = "lblWelcome";
-            this.lblWelcome.Size = new System.Drawing.Size(110, 24);
+            this.lblWelcome.Size = new System.Drawing.Size(319, 33);
             this.lblWelcome.TabIndex = 0;
-            this.lblWelcome.Text = "Welcome, ";
+            this.lblWelcome.Text = "Ulogovani administrator: ";
             // 
             // menuStrip1
             // 
+            this.menuStrip1.BackColor = System.Drawing.Color.Transparent;
             this.menuStrip1.Dock = System.Windows.Forms.DockStyle.None;
+            this.menuStrip1.Font = new System.Drawing.Font("Bahnschrift SemiBold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.knjigeToolStripMenuItem,
             this.clanoviToolStripMenuItem,
-            this.iznajmljivanjaToolStripMenuItem});
+            this.iznajmljivanjaToolStripMenuItem,
+            this.početnaToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(330, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(390, 24);
             this.menuStrip1.TabIndex = 2;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -86,6 +96,7 @@
             this.dodajIzdanjeToolStripMenuItem,
             this.pretraziKnjigeToolStripMenuItem,
             this.obrisiKnjiguToolStripMenuItem});
+            this.knjigeToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.knjigeToolStripMenuItem.Name = "knjigeToolStripMenuItem";
             this.knjigeToolStripMenuItem.Size = new System.Drawing.Size(52, 20);
             this.knjigeToolStripMenuItem.Text = "Knjige";
@@ -93,22 +104,29 @@
             // dodajNovuKnjiguToolStripMenuItem
             // 
             this.dodajNovuKnjiguToolStripMenuItem.Name = "dodajNovuKnjiguToolStripMenuItem";
-            this.dodajNovuKnjiguToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.dodajNovuKnjiguToolStripMenuItem.Size = new System.Drawing.Size(169, 22);
             this.dodajNovuKnjiguToolStripMenuItem.Text = "Dodaj novu knjigu";
             this.dodajNovuKnjiguToolStripMenuItem.Click += new System.EventHandler(this.dodajNovuKnjiguToolStripMenuItem_Click);
+            // 
+            // dodajIzdanjeToolStripMenuItem
+            // 
+            this.dodajIzdanjeToolStripMenuItem.Name = "dodajIzdanjeToolStripMenuItem";
+            this.dodajIzdanjeToolStripMenuItem.Size = new System.Drawing.Size(169, 22);
+            this.dodajIzdanjeToolStripMenuItem.Text = "Dodaj izdanje";
+            this.dodajIzdanjeToolStripMenuItem.Click += new System.EventHandler(this.dodajIzdanjeToolStripMenuItem_Click);
             // 
             // pretraziKnjigeToolStripMenuItem
             // 
             this.pretraziKnjigeToolStripMenuItem.Name = "pretraziKnjigeToolStripMenuItem";
-            this.pretraziKnjigeToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.pretraziKnjigeToolStripMenuItem.Text = "Pretrazi knjige";
+            this.pretraziKnjigeToolStripMenuItem.Size = new System.Drawing.Size(169, 22);
+            this.pretraziKnjigeToolStripMenuItem.Text = "Pretraži knjige";
             this.pretraziKnjigeToolStripMenuItem.Click += new System.EventHandler(this.pretraziKnjigeToolStripMenuItem_Click);
             // 
             // obrisiKnjiguToolStripMenuItem
             // 
             this.obrisiKnjiguToolStripMenuItem.Name = "obrisiKnjiguToolStripMenuItem";
-            this.obrisiKnjiguToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.obrisiKnjiguToolStripMenuItem.Text = "Obrisi knjigu";
+            this.obrisiKnjiguToolStripMenuItem.Size = new System.Drawing.Size(169, 22);
+            this.obrisiKnjiguToolStripMenuItem.Text = "Obriši knjigu";
             this.obrisiKnjiguToolStripMenuItem.Click += new System.EventHandler(this.obrisiKnjiguToolStripMenuItem_Click);
             // 
             // clanoviToolStripMenuItem
@@ -117,29 +135,30 @@
             this.dodajNovogClanaToolStripMenuItem,
             this.izmeniClanaToolStripMenuItem,
             this.obrisiClanaToolStripMenuItem});
+            this.clanoviToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.clanoviToolStripMenuItem.Name = "clanoviToolStripMenuItem";
-            this.clanoviToolStripMenuItem.Size = new System.Drawing.Size(59, 20);
-            this.clanoviToolStripMenuItem.Text = "Clanovi";
+            this.clanoviToolStripMenuItem.Size = new System.Drawing.Size(58, 20);
+            this.clanoviToolStripMenuItem.Text = "Članovi";
             // 
             // dodajNovogClanaToolStripMenuItem
             // 
             this.dodajNovogClanaToolStripMenuItem.Name = "dodajNovogClanaToolStripMenuItem";
-            this.dodajNovogClanaToolStripMenuItem.Size = new System.Drawing.Size(173, 22);
-            this.dodajNovogClanaToolStripMenuItem.Text = "Dodaj novog clana";
+            this.dodajNovogClanaToolStripMenuItem.Size = new System.Drawing.Size(171, 22);
+            this.dodajNovogClanaToolStripMenuItem.Text = "Dodaj novog člana";
             this.dodajNovogClanaToolStripMenuItem.Click += new System.EventHandler(this.dodajNovogClanaToolStripMenuItem_Click);
             // 
             // izmeniClanaToolStripMenuItem
             // 
             this.izmeniClanaToolStripMenuItem.Name = "izmeniClanaToolStripMenuItem";
-            this.izmeniClanaToolStripMenuItem.Size = new System.Drawing.Size(173, 22);
-            this.izmeniClanaToolStripMenuItem.Text = "Izmeni clana";
+            this.izmeniClanaToolStripMenuItem.Size = new System.Drawing.Size(171, 22);
+            this.izmeniClanaToolStripMenuItem.Text = "Izmeni člana";
             this.izmeniClanaToolStripMenuItem.Click += new System.EventHandler(this.izmeniClanaToolStripMenuItem_Click);
             // 
             // obrisiClanaToolStripMenuItem
             // 
             this.obrisiClanaToolStripMenuItem.Name = "obrisiClanaToolStripMenuItem";
-            this.obrisiClanaToolStripMenuItem.Size = new System.Drawing.Size(173, 22);
-            this.obrisiClanaToolStripMenuItem.Text = "Obrisi clana";
+            this.obrisiClanaToolStripMenuItem.Size = new System.Drawing.Size(171, 22);
+            this.obrisiClanaToolStripMenuItem.Text = "Obriši člana";
             this.obrisiClanaToolStripMenuItem.Click += new System.EventHandler(this.obrisiClanaToolStripMenuItem_Click);
             // 
             // iznajmljivanjaToolStripMenuItem
@@ -148,6 +167,8 @@
             this.napraviNovoIznajmljivanjeToolStripMenuItem,
             this.pretragaIznajmljenihKnjigaToolStripMenuItem,
             this.razduzivanjeKnjigaToolStripMenuItem});
+            this.iznajmljivanjaToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.iznajmljivanjaToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Transparent;
             this.iznajmljivanjaToolStripMenuItem.Name = "iznajmljivanjaToolStripMenuItem";
             this.iznajmljivanjaToolStripMenuItem.Size = new System.Drawing.Size(91, 20);
             this.iznajmljivanjaToolStripMenuItem.Text = "Iznajmljivanja";
@@ -170,20 +191,23 @@
             // 
             this.razduzivanjeKnjigaToolStripMenuItem.Name = "razduzivanjeKnjigaToolStripMenuItem";
             this.razduzivanjeKnjigaToolStripMenuItem.Size = new System.Drawing.Size(220, 22);
-            this.razduzivanjeKnjigaToolStripMenuItem.Text = "Razduzivanje knjiga";
+            this.razduzivanjeKnjigaToolStripMenuItem.Text = "Razduživanje knjiga";
             this.razduzivanjeKnjigaToolStripMenuItem.Click += new System.EventHandler(this.razduzivanjeKnjigaToolStripMenuItem_Click);
             // 
-            // dodajIzdanjeToolStripMenuItem
+            // početnaToolStripMenuItem
             // 
-            this.dodajIzdanjeToolStripMenuItem.Name = "dodajIzdanjeToolStripMenuItem";
-            this.dodajIzdanjeToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.dodajIzdanjeToolStripMenuItem.Text = "Dodaj izdanje";
-            this.dodajIzdanjeToolStripMenuItem.Click += new System.EventHandler(this.dodajIzdanjeToolStripMenuItem_Click);
+            this.početnaToolStripMenuItem.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.početnaToolStripMenuItem.Name = "početnaToolStripMenuItem";
+            this.početnaToolStripMenuItem.Size = new System.Drawing.Size(61, 20);
+            this.početnaToolStripMenuItem.Text = "Početna";
+            this.početnaToolStripMenuItem.Click += new System.EventHandler(this.početnaToolStripMenuItem_Click);
             // 
             // FrmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.pnlMain);
             this.Controls.Add(this.menuStrip1);
@@ -217,5 +241,6 @@
         private System.Windows.Forms.ToolStripMenuItem pretragaIznajmljenihKnjigaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem razduzivanjeKnjigaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem dodajIzdanjeToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem početnaToolStripMenuItem;
     }
 }

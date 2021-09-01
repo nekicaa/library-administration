@@ -37,25 +37,27 @@
             // txtStanjeServera
             // 
             this.txtStanjeServera.Enabled = false;
-            this.txtStanjeServera.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtStanjeServera.Font = new System.Drawing.Font("Bahnschrift", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtStanjeServera.ForeColor = System.Drawing.SystemColors.MenuText;
             this.txtStanjeServera.Location = new System.Drawing.Point(137, 104);
             this.txtStanjeServera.Name = "txtStanjeServera";
             this.txtStanjeServera.ReadOnly = true;
-            this.txtStanjeServera.Size = new System.Drawing.Size(131, 20);
+            this.txtStanjeServera.Size = new System.Drawing.Size(131, 21);
             this.txtStanjeServera.TabIndex = 7;
             // 
             // lblStanje
             // 
             this.lblStanje.AutoSize = true;
+            this.lblStanje.Font = new System.Drawing.Font("Bahnschrift", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblStanje.Location = new System.Drawing.Point(53, 107);
             this.lblStanje.Name = "lblStanje";
-            this.lblStanje.Size = new System.Drawing.Size(78, 13);
+            this.lblStanje.Size = new System.Drawing.Size(84, 13);
             this.lblStanje.TabIndex = 6;
             this.lblStanje.Text = "Stanje servera:";
             // 
             // btnZaustavi
             // 
+            this.btnZaustavi.Font = new System.Drawing.Font("Bahnschrift", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnZaustavi.Location = new System.Drawing.Point(175, 53);
             this.btnZaustavi.Name = "btnZaustavi";
             this.btnZaustavi.Size = new System.Drawing.Size(93, 29);
@@ -66,6 +68,7 @@
             // 
             // btnPokreni
             // 
+            this.btnPokreni.Font = new System.Drawing.Font("Bahnschrift", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPokreni.Location = new System.Drawing.Point(56, 53);
             this.btnPokreni.Name = "btnPokreni";
             this.btnPokreni.Size = new System.Drawing.Size(93, 29);

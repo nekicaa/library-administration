@@ -24,10 +24,5 @@ namespace View.UserControls
         {
             mainController.SaveClan(txtIme, txtPrezime, txtDatRodjenja, txtKontakt);
         }
-
-        private void UCAddMembers_Load(object sender, EventArgs e)
-        {
-
-        }
     }
 }
