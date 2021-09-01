@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UCAddBook));
             this.txtZanr = new System.Windows.Forms.TextBox();
             this.txtISBN = new System.Windows.Forms.TextBox();
             this.txtNaziv = new System.Windows.Forms.TextBox();
@@ -43,7 +42,7 @@
             // 
             this.txtZanr.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtZanr.Font = new System.Drawing.Font("Bahnschrift", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtZanr.Location = new System.Drawing.Point(189, 237);
+            this.txtZanr.Location = new System.Drawing.Point(149, 211);
             this.txtZanr.Name = "txtZanr";
             this.txtZanr.Size = new System.Drawing.Size(265, 22);
             this.txtZanr.TabIndex = 15;
@@ -52,7 +51,7 @@
             // 
             this.txtISBN.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtISBN.Font = new System.Drawing.Font("Bahnschrift", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtISBN.Location = new System.Drawing.Point(189, 195);
+            this.txtISBN.Location = new System.Drawing.Point(149, 169);
             this.txtISBN.Name = "txtISBN";
             this.txtISBN.Size = new System.Drawing.Size(265, 22);
             this.txtISBN.TabIndex = 14;
@@ -61,7 +60,7 @@
             // 
             this.txtNaziv.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtNaziv.Font = new System.Drawing.Font("Bahnschrift", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNaziv.Location = new System.Drawing.Point(189, 144);
+            this.txtNaziv.Location = new System.Drawing.Point(149, 118);
             this.txtNaziv.Name = "txtNaziv";
             this.txtNaziv.Size = new System.Drawing.Size(265, 22);
             this.txtNaziv.TabIndex = 13;
@@ -72,7 +71,7 @@
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Bahnschrift", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(85, 240);
+            this.label4.Location = new System.Drawing.Point(45, 214);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(35, 16);
             this.label4.TabIndex = 12;
@@ -84,7 +83,7 @@
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Bahnschrift", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(85, 198);
+            this.label3.Location = new System.Drawing.Point(45, 172);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(37, 16);
             this.label3.TabIndex = 11;
@@ -96,7 +95,7 @@
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Bahnschrift", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(85, 152);
+            this.label2.Location = new System.Drawing.Point(45, 126);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(40, 16);
             this.label2.TabIndex = 10;
@@ -107,7 +106,7 @@
             this.btnSacuvaj.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnSacuvaj.BackColor = System.Drawing.SystemColors.ControlLight;
             this.btnSacuvaj.Font = new System.Drawing.Font("Bahnschrift SemiBold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSacuvaj.Location = new System.Drawing.Point(201, 326);
+            this.btnSacuvaj.Location = new System.Drawing.Point(161, 287);
             this.btnSacuvaj.Name = "btnSacuvaj";
             this.btnSacuvaj.Size = new System.Drawing.Size(146, 23);
             this.btnSacuvaj.TabIndex = 8;
@@ -121,7 +120,7 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Bahnschrift", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(189, 66);
+            this.label1.Location = new System.Drawing.Point(149, 40);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(180, 25);
             this.label1.TabIndex = 8;
@@ -132,8 +131,6 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Controls.Add(this.txtZanr);
             this.Controls.Add(this.txtISBN);
             this.Controls.Add(this.txtNaziv);
@@ -143,7 +140,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "UCAddBook";
-            this.Size = new System.Drawing.Size(779, 422);
+            this.Size = new System.Drawing.Size(484, 366);
             this.ResumeLayout(false);
             this.PerformLayout();
 

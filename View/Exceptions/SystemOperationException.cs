@@ -8,7 +8,7 @@ namespace View.Exceptions
 {
     public class SystemOperationException : Exception
     {
-        public SystemOperationException() : base("Server ne moze da izvrsi zahtev!")
+        public SystemOperationException() : base("Server ne može da izvrši zahtev!")
         {
         }
 

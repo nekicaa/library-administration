@@ -55,7 +55,7 @@ namespace View.Controller
             }
             catch (SocketException)
             {
-                MessageBox.Show("Greska pri povezivanju sa serverom!");
+                MessageBox.Show("Greška pri povezivanju sa serverom!");
                 return false;
             }
         }

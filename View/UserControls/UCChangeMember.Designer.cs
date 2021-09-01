@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UCChangeMember));
             this.txtFilter = new System.Windows.Forms.TextBox();
             this.btnPretrazi = new System.Windows.Forms.Button();
             this.dgvClanovi = new System.Windows.Forms.DataGridView();
@@ -44,6 +43,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvClanovi)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -52,7 +52,7 @@
             // 
             this.txtFilter.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtFilter.Font = new System.Drawing.Font("Bahnschrift", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtFilter.Location = new System.Drawing.Point(41, 53);
+            this.txtFilter.Location = new System.Drawing.Point(17, 47);
             this.txtFilter.Name = "txtFilter";
             this.txtFilter.Size = new System.Drawing.Size(181, 22);
             this.txtFilter.TabIndex = 0;
@@ -62,7 +62,7 @@
             this.btnPretrazi.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnPretrazi.BackColor = System.Drawing.SystemColors.ControlLight;
             this.btnPretrazi.Font = new System.Drawing.Font("Bahnschrift SemiBold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPretrazi.Location = new System.Drawing.Point(228, 52);
+            this.btnPretrazi.Location = new System.Drawing.Point(204, 46);
             this.btnPretrazi.Name = "btnPretrazi";
             this.btnPretrazi.Size = new System.Drawing.Size(137, 23);
             this.btnPretrazi.TabIndex = 1;
@@ -78,7 +78,7 @@
             this.dgvClanovi.BackgroundColor = System.Drawing.SystemColors.ControlLight;
             this.dgvClanovi.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvClanovi.GridColor = System.Drawing.SystemColors.Control;
-            this.dgvClanovi.Location = new System.Drawing.Point(41, 114);
+            this.dgvClanovi.Location = new System.Drawing.Point(17, 108);
             this.dgvClanovi.Name = "dgvClanovi";
             this.dgvClanovi.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvClanovi.Size = new System.Drawing.Size(324, 197);
@@ -89,7 +89,7 @@
             this.btnOdaberi.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnOdaberi.BackColor = System.Drawing.SystemColors.ControlLight;
             this.btnOdaberi.Font = new System.Drawing.Font("Bahnschrift SemiBold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnOdaberi.Location = new System.Drawing.Point(228, 336);
+            this.btnOdaberi.Location = new System.Drawing.Point(204, 330);
             this.btnOdaberi.Name = "btnOdaberi";
             this.btnOdaberi.Size = new System.Drawing.Size(137, 23);
             this.btnOdaberi.TabIndex = 3;
@@ -111,7 +111,7 @@
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Location = new System.Drawing.Point(402, 3);
+            this.groupBox1.Location = new System.Drawing.Point(378, -3);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(360, 417);
             this.groupBox1.TabIndex = 4;
@@ -221,20 +221,31 @@
             this.label2.TabIndex = 9;
             this.label2.Text = "Ime";
             // 
+            // label6
+            // 
+            this.label6.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.Transparent;
+            this.label6.Font = new System.Drawing.Font("Bahnschrift", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(19, 21);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(190, 16);
+            this.label6.TabIndex = 8;
+            this.label6.Text = "Pretraži po imenu ili prezimenu:";
+            // 
             // UCChangeMember
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnOdaberi);
             this.Controls.Add(this.dgvClanovi);
             this.Controls.Add(this.btnPretrazi);
             this.Controls.Add(this.txtFilter);
             this.Name = "UCChangeMember";
-            this.Size = new System.Drawing.Size(762, 423);
+            this.Size = new System.Drawing.Size(714, 410);
             this.Load += new System.EventHandler(this.UCChangeMember_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvClanovi)).EndInit();
             this.groupBox1.ResumeLayout(false);
@@ -261,5 +272,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label6;
     }
 }

@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UCDeleteRent));
             this.btnOdaberi = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnObrisi = new System.Windows.Forms.Button();
@@ -43,6 +42,7 @@
             this.dgvIznajmljivanja = new System.Windows.Forms.DataGridView();
             this.txtFilter = new System.Windows.Forms.TextBox();
             this.btnPretrazi = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvStavke)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvIznajmljivanja)).BeginInit();
@@ -53,7 +53,7 @@
             this.btnOdaberi.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnOdaberi.BackColor = System.Drawing.SystemColors.ControlLight;
             this.btnOdaberi.Font = new System.Drawing.Font("Bahnschrift SemiBold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnOdaberi.Location = new System.Drawing.Point(231, 368);
+            this.btnOdaberi.Location = new System.Drawing.Point(203, 363);
             this.btnOdaberi.Name = "btnOdaberi";
             this.btnOdaberi.Size = new System.Drawing.Size(97, 23);
             this.btnOdaberi.TabIndex = 10;
@@ -75,7 +75,7 @@
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.dgvStavke);
             this.groupBox1.Font = new System.Drawing.Font("Bahnschrift", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(367, 0);
+            this.groupBox1.Location = new System.Drawing.Point(339, -5);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(373, 418);
             this.groupBox1.TabIndex = 9;
@@ -178,7 +178,7 @@
             this.dgvIznajmljivanja.BackgroundColor = System.Drawing.SystemColors.ControlLight;
             this.dgvIznajmljivanja.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvIznajmljivanja.GridColor = System.Drawing.SystemColors.Control;
-            this.dgvIznajmljivanja.Location = new System.Drawing.Point(43, 133);
+            this.dgvIznajmljivanja.Location = new System.Drawing.Point(15, 128);
             this.dgvIznajmljivanja.Name = "dgvIznajmljivanja";
             this.dgvIznajmljivanja.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvIznajmljivanja.Size = new System.Drawing.Size(285, 209);
@@ -188,7 +188,7 @@
             // 
             this.txtFilter.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtFilter.Font = new System.Drawing.Font("Bahnschrift", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtFilter.Location = new System.Drawing.Point(43, 72);
+            this.txtFilter.Location = new System.Drawing.Point(15, 67);
             this.txtFilter.Name = "txtFilter";
             this.txtFilter.Size = new System.Drawing.Size(169, 22);
             this.txtFilter.TabIndex = 7;
@@ -198,7 +198,7 @@
             this.btnPretrazi.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnPretrazi.BackColor = System.Drawing.SystemColors.ControlLight;
             this.btnPretrazi.Font = new System.Drawing.Font("Bahnschrift SemiBold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPretrazi.Location = new System.Drawing.Point(231, 70);
+            this.btnPretrazi.Location = new System.Drawing.Point(203, 65);
             this.btnPretrazi.Name = "btnPretrazi";
             this.btnPretrazi.Size = new System.Drawing.Size(97, 23);
             this.btnPretrazi.TabIndex = 6;
@@ -206,20 +206,31 @@
             this.btnPretrazi.UseVisualStyleBackColor = false;
             this.btnPretrazi.Click += new System.EventHandler(this.btnPretrazi_Click);
             // 
+            // label5
+            // 
+            this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.Font = new System.Drawing.Font("Bahnschrift", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(19, 45);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(109, 16);
+            this.label5.TabIndex = 11;
+            this.label5.Text = "Pretraži po članu:";
+            // 
             // UCDeleteRent
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.btnOdaberi);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.dgvIznajmljivanja);
             this.Controls.Add(this.txtFilter);
             this.Controls.Add(this.btnPretrazi);
             this.Name = "UCDeleteRent";
-            this.Size = new System.Drawing.Size(741, 419);
+            this.Size = new System.Drawing.Size(684, 408);
             this.Load += new System.EventHandler(this.UCDeleteRent_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -246,5 +257,6 @@
         private System.Windows.Forms.TextBox txtFilter;
         private System.Windows.Forms.Button btnPretrazi;
         private System.Windows.Forms.Button btnObrisi;
+        private System.Windows.Forms.Label label5;
     }
 }

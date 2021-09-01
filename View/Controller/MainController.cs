@@ -102,7 +102,7 @@ namespace View.Controller
         {
             getClan(cbClan);
             cbClan.SelectedIndex = -1;
-            cbClan.Text = "Izaberite clana...";
+            cbClan.Text = "Izaberite člana...";
         }
 
         internal void getClan(ComboBox cbClan)
@@ -146,7 +146,7 @@ namespace View.Controller
             } else
             {
                 dgvKnjige.DataSource = listKnjiga;
-                MessageBox.Show("Pronadjene su knjige.");
+                MessageBox.Show("Pronađene su knjige.");
             }
         }
 
@@ -163,7 +163,7 @@ namespace View.Controller
             } else
             {
                 dgvIznajmljivanja.DataSource = listIznajmljivanje;
-                MessageBox.Show("Pronadjena su iznajmljivanja.");
+                MessageBox.Show("Pronađena su iznajmljivanja.");
             }
         }
 
@@ -175,12 +175,12 @@ namespace View.Controller
 
             if (listClan.Count == 0)
             {
-                MessageBox.Show("Nema takvih clanova!");
+                MessageBox.Show("Nema takvih članova!");
                 dgvClanovi.DataSource = listClan;
             } else
             {
                 dgvClanovi.DataSource = listClan;
-                MessageBox.Show("Pronadjeni su clanovi.");
+                MessageBox.Show("Pronađeni su članovi.");
             }
         }
 
@@ -198,10 +198,10 @@ namespace View.Controller
 
             if(k == null)
             {
-                MessageBox.Show("Nije pronadjena trazena knjiga!");
+                MessageBox.Show("Nije pronađena tražena knjiga!");
             } else
             {
-                MessageBox.Show("Trazena knjiga je pronadjena!");
+                MessageBox.Show("Tražena knjiga je pronađena!");
                 txtNaziv.Text = k.Naziv;
                 txtISBN.Text = k.ISBN;
                 txtZanr.Text = k.Zanr;
@@ -224,10 +224,10 @@ namespace View.Controller
 
             if(iz == null)
             {
-                MessageBox.Show("Trazeno iznajmljivanje nije pronadjeno!");
+                MessageBox.Show("Traženo iznajmljivanje nije pronađeno!");
             } else
             {
-                MessageBox.Show("Trazeno iznajmljivanje je pronadjeno.");
+                MessageBox.Show("Traženo iznajmljivanje je pronađeno.");
                 txtDatIznajmljivanja.Text = iz.DatumIznajmljivanja.ToString();
                 txtRokRazduzivanja.Text = iz.RokZaRazduzivanje.ToString();
                 txtClan.Text = iz.Clan.ToString();
@@ -239,7 +239,7 @@ namespace View.Controller
         {
             if (dgvClanovi.SelectedRows.Count == 0)
             {
-                MessageBox.Show("Nije izabran ni jedan clan!");
+                MessageBox.Show("Nije izabran ni jedan član!");
                 return;
             }
 
@@ -249,11 +249,11 @@ namespace View.Controller
 
             if (c == null)
             {
-                MessageBox.Show("Trazeni clan nije pronadjen!");
+                MessageBox.Show("Traženi član nije pronađen!");
             }
             else
             {
-                MessageBox.Show("Clan je pronadjen!");
+                MessageBox.Show("Član je pronađen!");
                 txtIme.Text = c.Ime;
                 txtPrezime.Text = c.Prezime;
                 txtDatRodjenja.Text = c.DatumRodjenja.ToString();
@@ -270,7 +270,7 @@ namespace View.Controller
             }
             if (!Helpers.UserControlHelpers.EmptyFieldValidation(txtKolicina) | !Helpers.UserControlHelpers.IntValidation(txtKolicina))
             {
-                MessageBox.Show("Niste uneli kolicinu u odgovarajucem formatu");
+                MessageBox.Show("Niste uneli količinu u odgovarajućem formatu");
                 return;
             }
 
@@ -288,7 +288,7 @@ namespace View.Controller
                 };
                 stavkeBinding.Add(st);
             }
-            MessageBox.Show("Uspesno ste dodali stavku iznajmljivanja!");
+            MessageBox.Show("Uspešno ste dodali stavku iznajmljivanja!");
             dgvStavke.Refresh();
             txtKolicina.Text = "";
             LoadComboBoxKnjiga(cbKnjiga);
@@ -319,7 +319,7 @@ namespace View.Controller
 
             if (!UserControlHelpers.AllNumberValidation(txtISBN))
             {
-                MessageBox.Show("ISBN je u losem formatu!");
+                MessageBox.Show("ISBN je u lošem formatu!");
                 return;
             }
 
@@ -332,7 +332,7 @@ namespace View.Controller
                     Zanr = txtZanr.Text
                 };
                 Communication.Communication.Instance.SaveKnjiga(k);
-                MessageBox.Show("Knjiga uspesno sacuvana!");
+                MessageBox.Show("Knjiga uspešno sačuvana!");
                 // kako prebaciti na ucIzdanje?
                 txtNaziv.Text = "";
                 txtISBN.Text = "";
@@ -366,7 +366,7 @@ namespace View.Controller
 
             if (!UserControlHelpers.AllNumberValidation(txtGodStampe))
             {
-                MessageBox.Show("Godina stampe je u losem formatu!");
+                MessageBox.Show("Godina štampe je u lošem formatu!");
                 return;
             }
 
@@ -380,7 +380,7 @@ namespace View.Controller
                     Izdavac = txtIzdavac.Text
                 };
                 Communication.Communication.Instance.SaveIzdanje(iz);
-                MessageBox.Show("Izdanje uspesno sacuvano!");
+                MessageBox.Show("Izdanje uspešno sačuvano!");
                 LoadComboBoxAutor(cbAutori);
                 LoadComboBoxKnjiga(cbKnjige);
                 txtGodStampe.Text = "";
@@ -396,7 +396,7 @@ namespace View.Controller
         {
             if (cbClan.SelectedIndex == -1)
             {
-                MessageBox.Show("Morate odabrati clana!");
+                MessageBox.Show("Morate odabrati člana!");
                 return;
             }
 
@@ -410,18 +410,18 @@ namespace View.Controller
                 };
                 iz.Stavke = stavkeBinding.ToList();
                 Communication.Communication.Instance.SaveIznajmljivanje(iz);
-                MessageBox.Show("Iznajmljivanje sacuvano!");
+                MessageBox.Show("Iznajmljivanje sačuvano!");
                 stavkeBinding.Clear();
                 LoadComboBoxClan(cbClan);
                 dgvStavke.Refresh();
             }
             catch (SystemOperationException ex)
             {
-                MessageBox.Show("Iznajmljivanje nije sacuvano.\n" + ex.Message);
+                MessageBox.Show("Iznajmljivanje nije sačuvano.\n" + ex.Message);
             }
             catch (ServerException ex)
             {
-                MessageBox.Show("Iznajmljivanje nije sacuvano.\n" + ex.Message);
+                MessageBox.Show("Iznajmljivanje nije sačuvano.\n" + ex.Message);
             }
         }
 
@@ -434,12 +434,12 @@ namespace View.Controller
             }
             if (!UserControlHelpers.DateTimeValidation(txtDatRodjenja))
             {
-                MessageBox.Show("Datum rodjenja u losem formatu!");
+                MessageBox.Show("Datum rođenja u losem formatu!");
                 return;
             }
             if (!UserControlHelpers.AllNumberValidation(txtKontakt))
             {
-                MessageBox.Show("Kontakt u losem formatu!");
+                MessageBox.Show("Kontakt u lošem formatu!");
                 return;
             }
 
@@ -453,7 +453,7 @@ namespace View.Controller
                     Kontakt = txtKontakt.Text
                 };
                 Communication.Communication.Instance.SaveClan(c);
-                MessageBox.Show("Clan uspesno sacuvan!");
+                MessageBox.Show("Član uspešno sačuvan!");
                 txtIme.Text = "";
                 txtPrezime.Text = "";
                 txtDatRodjenja.Text = "";
@@ -474,17 +474,17 @@ namespace View.Controller
             }
             if (!UserControlHelpers.DateTimeValidation(txtDatRodjenja))
             {
-                MessageBox.Show("Datum rodjenja u losem formatu!");
+                MessageBox.Show("Datum rođenja u lošem formatu!");
                 return;
             }
             if (!UserControlHelpers.AllNumberValidation(txtKontakt))
             {
-                MessageBox.Show("Kontakt u losem formatu!");
+                MessageBox.Show("Kontakt u lošem formatu!");
                 return;
             }
             if (dgvClanovi.SelectedRows.Count == 0)
             {
-                MessageBox.Show("Morate da odaberete clana!");
+                MessageBox.Show("Morate da odaberete člana!");
                 return;
             }
 
@@ -497,7 +497,7 @@ namespace View.Controller
                 clan.Kontakt = txtKontakt.Text;
 
                 Communication.Communication.Instance.UpdateClan(clan);
-                MessageBox.Show("Clan uspesno izmenjen!");
+                MessageBox.Show("Član uspešno izmenjen!");
                 txtIme.Text = "";
                 txtPrezime.Text = "";
                 txtDatRodjenja.Text = "";
@@ -521,7 +521,7 @@ namespace View.Controller
             try
             {
                 Communication.Communication.Instance.DeleteKnjiga((Knjiga)dgvKnjige.SelectedRows[0].DataBoundItem);
-                MessageBox.Show("Uspesno obrisana knjiga!");
+                MessageBox.Show("Uspešno obrisana knjiga!");
                 dgvKnjige.Refresh();
                 txtNaziv.Text = "";
                 txtISBN.Text = "";
@@ -545,7 +545,7 @@ namespace View.Controller
             {
                 Iznajmljivanje iznajmljivanje = (Iznajmljivanje)dgvIznajmljivanja.SelectedRows[0].DataBoundItem;
                 Communication.Communication.Instance.DeleteIznajmljivanje(iznajmljivanje);
-                MessageBox.Show("Uspesno obrisano iznajmljivanje!");
+                MessageBox.Show("Uspešno obrisano iznajmljivanje!");
                 dgvIznajmljivanja.Refresh();
                 dgvStavke.Refresh();
                 txtDatIznajmljivanja.Text = "";
@@ -562,14 +562,14 @@ namespace View.Controller
         {
             if (dgvClanovi.SelectedRows.Count == 0)
             {
-                MessageBox.Show("Morate odabrati clana!");
+                MessageBox.Show("Morate odabrati člana!");
                 return;
             }
 
             try
             {
                 Communication.Communication.Instance.DeleteClan((Clan)dgvClanovi.SelectedRows[0].DataBoundItem);
-                MessageBox.Show("Clan je uspesno obrisan!");
+                MessageBox.Show("Član je uspešno obrisan!");
                 dgvClanovi.Refresh();
                 txtIme.Text = "";
                 txtPrezime.Text = "";

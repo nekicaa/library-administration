@@ -8,7 +8,7 @@ namespace View.Exceptions
 {
     public class SystemNotFoundException : Exception
     {
-        public SystemNotFoundException() : base("Netacna sifra ili korisnicko ime!")
+        public SystemNotFoundException() : base("Netačna šifra ili korisničko ime!")
         {
         }
         public SystemNotFoundException(String text) : base(text)

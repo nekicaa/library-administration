@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UCSearchRent));
             this.btnPretrazi = new System.Windows.Forms.Button();
             this.txtFilter = new System.Windows.Forms.TextBox();
             this.dgvIznajmljivanja = new System.Windows.Forms.DataGridView();
@@ -42,6 +41,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.btnOdaberi = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvIznajmljivanja)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvStavke)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -52,7 +52,7 @@
             this.btnPretrazi.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnPretrazi.BackColor = System.Drawing.SystemColors.ControlLight;
             this.btnPretrazi.Font = new System.Drawing.Font("Bahnschrift SemiBold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPretrazi.Location = new System.Drawing.Point(238, 73);
+            this.btnPretrazi.Location = new System.Drawing.Point(217, 65);
             this.btnPretrazi.Name = "btnPretrazi";
             this.btnPretrazi.Size = new System.Drawing.Size(97, 23);
             this.btnPretrazi.TabIndex = 0;
@@ -64,7 +64,7 @@
             // 
             this.txtFilter.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtFilter.Font = new System.Drawing.Font("Bahnschrift", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtFilter.Location = new System.Drawing.Point(50, 75);
+            this.txtFilter.Location = new System.Drawing.Point(29, 67);
             this.txtFilter.Name = "txtFilter";
             this.txtFilter.Size = new System.Drawing.Size(169, 22);
             this.txtFilter.TabIndex = 1;
@@ -77,7 +77,7 @@
             this.dgvIznajmljivanja.BackgroundColor = System.Drawing.SystemColors.ControlLight;
             this.dgvIznajmljivanja.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvIznajmljivanja.GridColor = System.Drawing.SystemColors.Control;
-            this.dgvIznajmljivanja.Location = new System.Drawing.Point(50, 136);
+            this.dgvIznajmljivanja.Location = new System.Drawing.Point(29, 128);
             this.dgvIznajmljivanja.Name = "dgvIznajmljivanja";
             this.dgvIznajmljivanja.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvIznajmljivanja.Size = new System.Drawing.Size(285, 209);
@@ -110,7 +110,7 @@
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.dgvStavke);
             this.groupBox1.Font = new System.Drawing.Font("Bahnschrift", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(374, 3);
+            this.groupBox1.Location = new System.Drawing.Point(353, -5);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(373, 418);
             this.groupBox1.TabIndex = 4;
@@ -185,7 +185,7 @@
             this.btnOdaberi.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnOdaberi.BackColor = System.Drawing.SystemColors.ControlLight;
             this.btnOdaberi.Font = new System.Drawing.Font("Bahnschrift SemiBold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnOdaberi.Location = new System.Drawing.Point(238, 371);
+            this.btnOdaberi.Location = new System.Drawing.Point(217, 363);
             this.btnOdaberi.Name = "btnOdaberi";
             this.btnOdaberi.Size = new System.Drawing.Size(97, 23);
             this.btnOdaberi.TabIndex = 5;
@@ -193,20 +193,31 @@
             this.btnOdaberi.UseVisualStyleBackColor = false;
             this.btnOdaberi.Click += new System.EventHandler(this.btnOdaberi_Click);
             // 
+            // label5
+            // 
+            this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.Font = new System.Drawing.Font("Bahnschrift", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(29, 39);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(109, 16);
+            this.label5.TabIndex = 6;
+            this.label5.Text = "Pretraži po članu:";
+            // 
             // UCSearchRent
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.btnOdaberi);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.dgvIznajmljivanja);
             this.Controls.Add(this.txtFilter);
             this.Controls.Add(this.btnPretrazi);
             this.Name = "UCSearchRent";
-            this.Size = new System.Drawing.Size(750, 424);
+            this.Size = new System.Drawing.Size(709, 408);
             this.Load += new System.EventHandler(this.UCSearchRent_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvIznajmljivanja)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvStavke)).EndInit();
@@ -232,5 +243,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label5;
     }
 }

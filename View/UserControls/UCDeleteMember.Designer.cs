@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UCDeleteMember));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label1 = new System.Windows.Forms.Label();
             this.btnObrisi = new System.Windows.Forms.Button();
@@ -44,6 +43,7 @@
             this.dgvClanovi = new System.Windows.Forms.DataGridView();
             this.btnPretrazi = new System.Windows.Forms.Button();
             this.txtFilter = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvClanovi)).BeginInit();
             this.SuspendLayout();
@@ -184,7 +184,9 @@
             this.dgvClanovi.AllowUserToAddRows = false;
             this.dgvClanovi.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dgvClanovi.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvClanovi.BackgroundColor = System.Drawing.SystemColors.ControlLight;
             this.dgvClanovi.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvClanovi.GridColor = System.Drawing.SystemColors.Control;
             this.dgvClanovi.Location = new System.Drawing.Point(42, 116);
             this.dgvClanovi.Name = "dgvClanovi";
             this.dgvClanovi.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -213,13 +215,23 @@
             this.txtFilter.Size = new System.Drawing.Size(196, 22);
             this.txtFilter.TabIndex = 5;
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.Transparent;
+            this.label6.Font = new System.Drawing.Font("Bahnschrift", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(44, 28);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(190, 16);
+            this.label6.TabIndex = 10;
+            this.label6.Text = "Pretraži po imenu ili prezimenu:";
+            // 
             // UCDeleteMember
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnOdaberi);
             this.Controls.Add(this.dgvClanovi);
@@ -253,5 +265,6 @@
         private System.Windows.Forms.DataGridView dgvClanovi;
         private System.Windows.Forms.Button btnPretrazi;
         private System.Windows.Forms.TextBox txtFilter;
+        private System.Windows.Forms.Label label6;
     }
 }

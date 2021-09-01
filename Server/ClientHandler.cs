@@ -49,7 +49,7 @@ namespace Server
             }
             catch (IOException)
             {
-                Console.WriteLine("Doslo je do prekida veze");
+                Console.WriteLine("Došlo je do prekida veze");
                 //obratiti paznju na EventHandler FrmMain FormClosed (ako zatvorimo glavnu formu, i prakticno se izlogujemo, prekidamo vezu sa serverom
                 //drugi nacin bi bio da posaljemo zahtev sa operacijom logout, tako da klijent ostane povezan
                 administratori.Remove(ulogovaniAdministrator);
@@ -57,7 +57,7 @@ namespace Server
             }
             catch (SerializationException)
             {
-                Console.WriteLine("Doslo je do prekida veze");
+                Console.WriteLine("Došlo je do prekida veze");
                 //obratiti paznju na EventHandler FrmMain FormClosed (ako zatvorimo glavnu formu, i prakticno se izlogujemo, prekidamo vezu sa serverom
                 //drugi nacin bi bio da posaljemo zahtev sa operacijom logout, tako da klijent ostane povezan
                 administratori.Remove(ulogovaniAdministrator);

@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UCSearchBook));
             this.txtFilter = new System.Windows.Forms.TextBox();
             this.btnPretrazi = new System.Windows.Forms.Button();
             this.dgvKnjige = new System.Windows.Forms.DataGridView();
@@ -41,6 +40,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.lblNaslov = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvKnjige)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -49,7 +49,7 @@
             // 
             this.txtFilter.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtFilter.Font = new System.Drawing.Font("Bahnschrift", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtFilter.Location = new System.Drawing.Point(37, 70);
+            this.txtFilter.Location = new System.Drawing.Point(12, 62);
             this.txtFilter.Name = "txtFilter";
             this.txtFilter.Size = new System.Drawing.Size(169, 22);
             this.txtFilter.TabIndex = 0;
@@ -59,7 +59,7 @@
             this.btnPretrazi.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnPretrazi.BackColor = System.Drawing.SystemColors.ControlLight;
             this.btnPretrazi.Font = new System.Drawing.Font("Bahnschrift SemiBold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPretrazi.Location = new System.Drawing.Point(221, 68);
+            this.btnPretrazi.Location = new System.Drawing.Point(196, 60);
             this.btnPretrazi.Name = "btnPretrazi";
             this.btnPretrazi.Size = new System.Drawing.Size(110, 23);
             this.btnPretrazi.TabIndex = 1;
@@ -76,7 +76,7 @@
             this.dgvKnjige.BackgroundColor = System.Drawing.SystemColors.ControlLight;
             this.dgvKnjige.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvKnjige.GridColor = System.Drawing.SystemColors.Control;
-            this.dgvKnjige.Location = new System.Drawing.Point(37, 120);
+            this.dgvKnjige.Location = new System.Drawing.Point(12, 112);
             this.dgvKnjige.Name = "dgvKnjige";
             this.dgvKnjige.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvKnjige.Size = new System.Drawing.Size(294, 195);
@@ -87,7 +87,7 @@
             this.btnOdaberi.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnOdaberi.BackColor = System.Drawing.SystemColors.ControlLight;
             this.btnOdaberi.Font = new System.Drawing.Font("Bahnschrift SemiBold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnOdaberi.Location = new System.Drawing.Point(221, 349);
+            this.btnOdaberi.Location = new System.Drawing.Point(196, 341);
             this.btnOdaberi.Name = "btnOdaberi";
             this.btnOdaberi.Size = new System.Drawing.Size(110, 23);
             this.btnOdaberi.TabIndex = 3;
@@ -106,7 +106,7 @@
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.lblNaslov);
-            this.groupBox1.Location = new System.Drawing.Point(372, 0);
+            this.groupBox1.Location = new System.Drawing.Point(347, -8);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(406, 416);
             this.groupBox1.TabIndex = 4;
@@ -183,20 +183,31 @@
             this.lblNaslov.TabIndex = 0;
             this.lblNaslov.Text = "Knjiga ";
             // 
+            // label5
+            // 
+            this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.Font = new System.Drawing.Font("Bahnschrift", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(12, 35);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(164, 16);
+            this.label5.TabIndex = 7;
+            this.label5.Text = "Pretraži po nazivu ili žanru:";
+            // 
             // UCSearchBook
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnOdaberi);
             this.Controls.Add(this.dgvKnjige);
             this.Controls.Add(this.btnPretrazi);
             this.Controls.Add(this.txtFilter);
             this.Name = "UCSearchBook";
-            this.Size = new System.Drawing.Size(778, 416);
+            this.Size = new System.Drawing.Size(729, 400);
             this.Load += new System.EventHandler(this.UCSearchBook_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvKnjige)).EndInit();
             this.groupBox1.ResumeLayout(false);
@@ -220,5 +231,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label5;
     }
 }

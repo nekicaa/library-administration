@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMain));
             this.pnlMain = new System.Windows.Forms.Panel();
             this.lblWelcome = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
@@ -58,7 +57,7 @@
             this.pnlMain.Font = new System.Drawing.Font("Bahnschrift", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.pnlMain.Location = new System.Drawing.Point(0, 24);
             this.pnlMain.Name = "pnlMain";
-            this.pnlMain.Size = new System.Drawing.Size(800, 426);
+            this.pnlMain.Size = new System.Drawing.Size(842, 465);
             this.pnlMain.TabIndex = 3;
             // 
             // lblWelcome
@@ -67,7 +66,7 @@
             this.lblWelcome.AutoSize = true;
             this.lblWelcome.BackColor = System.Drawing.Color.Transparent;
             this.lblWelcome.Font = new System.Drawing.Font("Bahnschrift SemiBold", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblWelcome.Location = new System.Drawing.Point(70, 145);
+            this.lblWelcome.Location = new System.Drawing.Point(91, 164);
             this.lblWelcome.Name = "lblWelcome";
             this.lblWelcome.Size = new System.Drawing.Size(319, 33);
             this.lblWelcome.TabIndex = 0;
@@ -85,7 +84,7 @@
             this.početnaToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(390, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(270, 24);
             this.menuStrip1.TabIndex = 2;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -96,7 +95,7 @@
             this.dodajIzdanjeToolStripMenuItem,
             this.pretraziKnjigeToolStripMenuItem,
             this.obrisiKnjiguToolStripMenuItem});
-            this.knjigeToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.knjigeToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ControlText;
             this.knjigeToolStripMenuItem.Name = "knjigeToolStripMenuItem";
             this.knjigeToolStripMenuItem.Size = new System.Drawing.Size(52, 20);
             this.knjigeToolStripMenuItem.Text = "Knjige";
@@ -135,7 +134,7 @@
             this.dodajNovogClanaToolStripMenuItem,
             this.izmeniClanaToolStripMenuItem,
             this.obrisiClanaToolStripMenuItem});
-            this.clanoviToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.clanoviToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ControlText;
             this.clanoviToolStripMenuItem.Name = "clanoviToolStripMenuItem";
             this.clanoviToolStripMenuItem.Size = new System.Drawing.Size(58, 20);
             this.clanoviToolStripMenuItem.Text = "Članovi";
@@ -167,7 +166,7 @@
             this.napraviNovoIznajmljivanjeToolStripMenuItem,
             this.pretragaIznajmljenihKnjigaToolStripMenuItem,
             this.razduzivanjeKnjigaToolStripMenuItem});
-            this.iznajmljivanjaToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.iznajmljivanjaToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ControlText;
             this.iznajmljivanjaToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Transparent;
             this.iznajmljivanjaToolStripMenuItem.Name = "iznajmljivanjaToolStripMenuItem";
             this.iznajmljivanjaToolStripMenuItem.Size = new System.Drawing.Size(91, 20);
@@ -197,6 +196,7 @@
             // početnaToolStripMenuItem
             // 
             this.početnaToolStripMenuItem.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.početnaToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.početnaToolStripMenuItem.Name = "početnaToolStripMenuItem";
             this.početnaToolStripMenuItem.Size = new System.Drawing.Size(61, 20);
             this.početnaToolStripMenuItem.Text = "Početna";
@@ -206,14 +206,13 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.ClientSize = new System.Drawing.Size(841, 488);
             this.Controls.Add(this.pnlMain);
             this.Controls.Add(this.menuStrip1);
             this.Name = "FrmMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Pocetna strana";
+            this.Text = "Početna strana";
             this.pnlMain.ResumeLayout(false);
             this.pnlMain.PerformLayout();
             this.menuStrip1.ResumeLayout(false);
