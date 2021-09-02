@@ -434,7 +434,7 @@ namespace View.Controller
             }
             if (!UserControlHelpers.DateTimeValidation(txtDatRodjenja))
             {
-                MessageBox.Show("Datum rođenja u losem formatu!");
+                MessageBox.Show("Datum rođenja u lošem formatu!");
                 return;
             }
             if (!UserControlHelpers.AllNumberValidation(txtKontakt))
